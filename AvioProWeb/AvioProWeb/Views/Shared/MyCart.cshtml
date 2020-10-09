@@ -1,0 +1,56 @@
+﻿@model IEnumerable < AvioProWeb.Models.Cart>
+
+@if (Model != null)
+{
+    int count = 0;
+
+    <div class="modal-body">
+        <div class="login_wrap">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <h2><span>Your Cart </span></h2>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th style="font-size:10px">Name</th>
+                                <th style="font-size:10px">Brand</th>
+                                <th style="font-size:10px">PartNumber</th>
+                                <th style="font-size:10px">Units</th>
+                                <th style="font-size:10px">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*@{
+                                int sum = 0;
+                            }*@
+                            @foreach (var item in Model)
+                            {
+
+                                //sum = Convert.ToInt32(@item.SellPri) + sum;
+                                count = count + 1;
+                                <tr>
+                                    <td>@item.Name</td>
+                                    <td>@item.Brand</td>
+                                    <td> @item.PartNumber</td>
+                                    <td>@item.Units</td>
+                                    <td>1</td>
+                                    <td><button style="font-size:24px;color:red"> <i class="fa fa-trash-o " onclick="location.href='@Url.Action("Delete", "Carts", item)'"></i></button></td>
+                                </tr>
+                            }
+                            <tr>
+                                @*<td colspan="4" class="text-right"><b>Total: $@sum</b></td>*@
+                                <td colspan="5" class="text-left"><b>Total: @count</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-success" @*onclick="location.href='@Url.Action("AddOrder", "OrderMasters")'"*@>Mail >> </button> <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Index", "Home")'"> Continue Shopping >></button>
+                </div>
+                
+                @*<div class="mid_divider"></div>*@
+               
+            </div>
+        </div>
+    </div>
+}

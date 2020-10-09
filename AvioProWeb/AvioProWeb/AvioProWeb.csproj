@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E55AE66-3DD0-401E-A940-161EF795B5DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvioProWeb</RootNamespace>
+    <AssemblyName>AvioProWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44329</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\default.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\owl.carousel.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\2453-aircreaft-logo.png" />
+    <Content Include="images\3385-avio-pro-logo.png" />
+    <Content Include="images\3854-aeroshell-logo.png" />
+    <Content Include="images\4325-lps-logo.png" />
+    <Content Include="images\5846-3M-logo %282%29.png" />
+    <Content Include="images\7118-nitto-logo.png" />
+    <Content Include="images\avio-pro-logo-01.png" />
+    <Content Include="images\avio-pro-logo-white.png" />
+    <Content Include="images\no-image.png" />
+    <Content Include="images\our-history.jpg" />
+    <Content Include="images\Our-Prescence.png" />
+    <Content Include="images\our-wearhouses.jpg" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL 5MA %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL CALIBRATES FLUID 2 %28 1 X 202L%29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL COMPOUND 7 %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 12 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 2XN %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 3 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 31 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 41 %28 1 X 203L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 41 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 41 %28 4 X 5L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 602 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 61 %28 1 X 55USG  %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID S.8350 %28 1 X 20L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 14 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 14 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %28170 KG DRUM%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 33 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 33 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 33 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 6 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 6 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 64 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 64 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 7 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 7 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 7 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL LANDING GEAR FLUID %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 100 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 100 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 100 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 15W50 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 15W50 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL D ULTRA %2812 X 1L%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL SPORT PLUS 4 %2812 X 1L%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 PLUS %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W120 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W80 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W80 %28 12 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL SMOKE OIL %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 02 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 02 %28 1 X 5USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 03 %28 1X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 03 %28 1X 5USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 308 %28 24 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 390 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 500 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 500 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 555 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 555 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 560 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 560 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 750 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL ASCENDER %2824 X 1USQ%29.jpg" />
+    <Content Include="images\website banner.jpeg" />
+    <Content Include="images\website side logo.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="js\bootstrap.js.download" />
+    <Content Include="js\common.js.download" />
+    <Content Include="js\jquery-3.1.1.slim.min.js.download" />
+    <Content Include="js\jquery.js.download" />
+    <Content Include="js\owl.carousel.js.download" />
+    <Content Include="js\tether.min.js.download" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Category\COATINGS.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch1252.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch776.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch1137.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch776SR.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch5816.cshtml" />
+    <Content Include="Views\Shared\MyCart.cshtml" />
+    <Content Include="Views\Category\AdhesionPromoters.cshtml" />
+    <Content Include="Views\Category\AEROSHELL_Fluids.cshtml" />
+    <Content Include="Views\Category\Lubricants.cshtml" />
+    <Content Include="Views\Category\AerospaceTapes.cshtml" />
+    <Content Include="Views\Category\CorrosionInhibitors.cshtml" />
+    <Content Include="Views\Category\AeroShell_Grease.cshtml" />
+    <Content Include="Views\Category\Electronic_Cleaners.cshtml" />
+    <Content Include="Views\Shared\PistonEngineOil.cshtml" />
+    <Content Include="Views\Category\TurbineOil.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters5000.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters5000AS.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters131.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters86A.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters132.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters776SR.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters137.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters130.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters160.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters5005.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3960.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters2333.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters2174.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3924.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3901.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1593.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1660.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3917.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1290.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1945.cshtml" />
+    <Content Include="Views\Category\EngineOil.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid2.cshtml" />
+    <Content Include="Views\Shared\Aero_Compound7.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid2XN.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid3.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid5MA.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid12.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid31.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid61.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid41.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid602.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid8350.cshtml" />
+    <Content Include="Views\Shared\Aero_GearFluid.cshtml" />
+    <Content Include="Views\Shared\Aero_SmokeOil.cshtml" />
+    <Content Include="Views\Shared\LPS_ChainMate.cshtml" />
+    <Content Include="Views\Shared\LPS_PTFE.cshtml" />
+    <Content Include="Views\Shared\LPS_GreaseLess.cshtml" />
+    <Content Include="Views\Shared\LPS_HeavyDuty.cshtml" />
+    <Content Include="Views\Shared\LPS_Penetrant.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
+    <Folder Include="Views\Shared\Coating\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49958</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44329/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
