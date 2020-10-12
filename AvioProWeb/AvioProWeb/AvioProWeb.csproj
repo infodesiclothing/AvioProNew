@@ -283,7 +283,7 @@
     <Content Include="Views\Shared\Promoters_3MPromoters3917.cshtml" />
     <Content Include="Views\Shared\Promoters_3MPromoters1290.cshtml" />
     <Content Include="Views\Shared\Promoters_3MPromoters1945.cshtml" />
-    <Content Include="Views\Category\EngineOil.cshtml" />
+    <Content Include="Views\Category\PistonOil.cshtml" />
     <Content Include="Views\Shared\Aero_Fluid2.cshtml" />
     <Content Include="Views\Shared\Aero_Compound7.cshtml" />
     <Content Include="Views\Shared\Aero_Fluid2XN.cshtml" />
@@ -302,6 +302,26 @@
     <Content Include="Views\Shared\LPS_GreaseLess.cshtml" />
     <Content Include="Views\Shared\LPS_HeavyDuty.cshtml" />
     <Content Include="Views\Shared\LPS_Penetrant.cshtml" />
+    <Content Include="Views\Shared\LPS_Corrosion.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease6.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease7.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease14.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease22.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease33.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease64.cshtml" />
+    <Content Include="Views\Shared\LPS_CFCCleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_140Cleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_ElectroCleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_2NoFlashCleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_NoFlashCleaners.cshtml" />
+    <Content Include="Views\Shared\Aero_Oil100.cshtml" />
+    <Content Include="Views\Shared\Aero_OilDUltra.cshtml" />
+    <Content Include="Views\Shared\Aero_OilSPlus4.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW100.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW80.cshtml" />
+    <Content Include="Views\Shared\Aero_Oil100Pl.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW120.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

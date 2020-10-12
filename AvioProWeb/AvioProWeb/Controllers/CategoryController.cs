@@ -44,11 +44,11 @@ namespace AvioProWeb.Controllers
             {
                 return View("AerospaceTapes");
             }
-            if (Params == "ENGINE OIL")
+            if (Params == "PistonOIL")
             {
-                return View("EngineOil");
+                return View("PistonOil");
             }
-            if (Params == "TURBINE OIL")
+            if (Params == "TurbineOil")
             {
                 return View("COATINGS");
             }
@@ -68,7 +68,9 @@ namespace AvioProWeb.Controllers
             };
             if (Session["cart"] == null)
             {
+               
                 List<Cart> li = new List<Cart>();
+                li.Add(cart);
                 Session["cart"] = li;
                 ViewBag.cart = li.Count();
                 Session["count"] = 1;

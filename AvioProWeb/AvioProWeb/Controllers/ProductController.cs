@@ -183,7 +183,98 @@ namespace AvioProWeb.Controllers
             {
                 return View("LPS_Penetrant");
             }
-
+            //Corrosion
+            if (Param == "Corrosion")
+            {
+                return View("LPS_Corrosion");
+            }
+            //AeroShell Grease
+            if (Param == "AeroOil100")
+            {
+                return View("Aero_Oil100");
+            }
+            if (Param == "AeroOilDUltra")
+            {
+                return View("Aero_OilDUltra");
+            }
+            if (Param == "AeroOilSPlus4")
+            {
+                return View("Aero_OilSPlus4");
+            }
+            if (Param == "AeroOilW100")
+            {
+                return View("Aero_OilW100");
+            }
+            if (Param == "AeroOilW")
+            {
+                return View("Aero_OilW");
+            }
+            if (Param == "AeroOilW80")
+            {
+                return View("Aero_OilW80");
+            }
+            if (Param == "AeroOil100Pl")
+            {
+                return View("Aero_Oil100Pl");
+            }
+            if (Param == "AeroOilW120")
+            {
+                return View("Aero_OilW120");
+            }
+            //Electronic Cleaners
+            if (Param == "LPSCFCCleaners")
+            {
+                return View("LPS_CFCCleaners");
+            }
+            if (Param == "LPS140Cleaners")
+            {
+                return View("LPS_140Cleaners");
+            }
+            if (Param == "LPSElectroCleaners")
+            {
+                return View("LPS_ElectroCleaners");
+            }
+            if (Param == "LPS2NoFlashCleaners")
+            {
+                return View("LPS_2NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            //AeroShell Piston Oil
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
+            if (Param == "LPSNoFlashCleaners")
+            {
+                return View("LPS_NoFlashCleaners");
+            }
 
             return View("coating_3mscotch");
         }
