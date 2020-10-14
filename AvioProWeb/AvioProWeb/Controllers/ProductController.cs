@@ -275,6 +275,51 @@ namespace AvioProWeb.Controllers
             {
                 return View("LPS_NoFlashCleaners");
             }
+            //Turbine Oil
+            if (Param == "AeroTurbineOilAscender")
+            {
+                return View("Aero_TurbineOil_Ascender");
+            }
+            if (Param == "AeroTurbineOil2EU")
+            {
+                return View("Aero_TurbineOil_2EU");
+            }
+            if (Param == "AeroTurbineOil2")
+            {
+                return View("Aero_TurbineOil_2");
+            }
+            if (Param == "AeroTurbineOil3")
+            {
+                return View("Aero_TurbineOil_3");
+            }
+            if (Param == "AeroTurbineOil308")
+            {
+                return View("Aero_TurbineOil_308");
+            }
+            if (Param == "AeroTurbineOil309")
+            {
+                return View("Aero_TurbineOil_309");
+            }
+            if (Param == "AeroTurbineOil500")
+            {
+                return View("Aero_TurbineOil_500");
+            }
+            if (Param == "AeroTurbineOil555")
+            {
+                return View("Aero_TurbineOil_555");
+            }
+            if (Param == "AeroTurbineOil560")
+            {
+                return View("Aero_TurbineOil_560");
+            }
+            if (Param == "AeroTurbineOil560")
+            {
+                return View("Aero_TurbineOil_560_b");
+            }
+            if (Param == "AeroTurbineOil750")
+            {
+                return View("Aero_TurbineOil_750");
+            }
 
             return View("coating_3mscotch");
         }

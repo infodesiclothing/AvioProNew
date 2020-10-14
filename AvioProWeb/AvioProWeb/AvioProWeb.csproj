@@ -322,6 +322,17 @@
     <Content Include="Views\Shared\Aero_OilW80.cshtml" />
     <Content Include="Views\Shared\Aero_Oil100Pl.cshtml" />
     <Content Include="Views\Shared\Aero_OilW120.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_2EU.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_2.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_3.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_308.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_390.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_500.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_555.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_560.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_560_b.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_750.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_Ascender.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
