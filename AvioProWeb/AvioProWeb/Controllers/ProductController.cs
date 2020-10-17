@@ -320,6 +320,46 @@ namespace AvioProWeb.Controllers
             {
                 return View("Aero_TurbineOil_750");
             }
+            //Added by Mohtashim for 3m-Tapes
+            //3M Aerospace Tapes & Adhesives
+            if (Param == "3m-polyurethane-protective-tape-8663") { return View("Tapes_protectivetape8663"); }
+            if (Param == "3m-polyurethane-protective-tape-8681hs") { return View("Tapes_3mpolyurethaneprotectivetape8681hs"); }
+            if (Param == "3m-polyurethane-protective-tape-8547") { return View("Tapes_3mpolyurethaneprotectivetape8547"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-1751-ba") { return View("Tapes_3mscotchweldepoxyadhesiveec1751ba"); }
+            if (Param == "3m-scotch-weld-adhesivesealant-ec-3537-na-ba") { return View("Tapes_3mscotchweldadhesivesealantec3537naba"); }
+            if (Param == "3m-scotch-weld-structural-adhesive-film-af-15") { return View("Tapes_3mscotchweldstructuraladhesivefilmaf15"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-3531-ba-fr") { return View("Tapes_3mscotchweldepoxyadhesiveec3531bafr"); }
+            if (Param == "3m-polyurethane-protective-tape-8730na") { return View("Tapes_3mpolyurethaneprotectivetape8730na"); }
+            if (Param == "3m-polyurethane-protective-tape-8673") { return View("Tapes_3mpolyurethaneprotectivetape8673"); }
+            if (Param == "3m-polyurethane-protective-tape-8671") { return View("Tapes_3mpolyurethaneprotectivetape8671"); }
+            if (Param == "3m-scotch-weld-bracket-bonding-adhesive-ec-7202") { return View("Tapes_3mscotchweldbracketbondingadhesiveec7202"); }
+            if (Param == "3m-protective-tape-application-solution") { return View("Tapes_3mprotectivetapeapplicationsolution"); }
+            if (Param == "3m-scotch-weld-urethane-adhesive-ec-3532-ba") { return View("Tapes_3mscotchweldurethaneadhesiveec3532ba"); }
+            if (Param == "3m-scotch-weld-neoprene-high-performance-rubber-and-gasket-adhesive-ec-1300") { return View("Tapes_3msadhesiveec1300"); }
+            if (Param == "3m-polyurethane-protective-tape-8544") { return View("Tapes_3mpolyurethaneprotectivetape8544"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-3537-na-ba") { return View("Tapes_3mscotchweldepoxyadhesiveec3537naba"); }
+            if (Param == "3m-scotch-weld-urethane-adhesive-ec-3587-ba") { return View("Tapes_3mscotchweldurethaneadhesiveec3587ba"); }
+            if (Param == "3m-scotch-weld-urethane-adhesive-ec-3535-ba") { return View("Tapes_3mscotchweldurethaneadhesiveec3535ba"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-2216-ba-gray") { return View("Tapes_3mscotchweldepoxyadhesiveec2216bagray"); }
+            if (Param == "3m-scotch-weld-neoprene-high-performance-contact-adhesive-ec-1357") { return View("Tapes_3mscotchweldneoprenehighper1357"); }
+            if (Param == "3m-polyurethane-protective-tape-8734na") { return View("Tapes_3mpolyurethaneprotectivetape8734na"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-2216-ba-translucent") { return View("Tapes_3mscotchweldepoxyadhesiveec2216batranslucent"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-2792-ba") { return View("Tapes_3mscotchweldepoxyadhesiveec2792ba"); }
+            if (Param == "3m-scotch-weld-structural-adhesive-film-af-3185") { return View("Tapes_3mscotchweldstructuraladhesivefilmaf3185"); }
+            if (Param == "3m-scotch-weld-repair-paste-rp-2220") { return View("Tapes_3mscotchweldrepairpasterp2220"); }
+            if (Param == "3m-polyurethane-protective-tape-8663dl") { return View("Tapes_3mpolyurethaneprotectivetape8663dl"); }
+            if (Param == "3M-Scotch-Weld-Structural-Adhesive-EC-1458") { return View("Tapes_3MScotchWeldStructuralAdhesiveEC1458"); }
+            if (Param == "3m-scotch-weld-structural-adhesives-ec-3964") { return View("Tapes_3mscotchweldstructuraladhesivesec3964"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-1838") { return View("Tapes_3mscotchweldepoxyadhesiveec1838"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-1469") { return View("Tapes_3mscotchweldepoxyadhesiveec1469"); }
+            if (Param == "3m-polyurethane-protective-tape-8657") { return View("Tapes_3mpolyurethaneprotectivetape8657"); }
+            if (Param == "3m-polyurethane-protective-tape-8658dl") { return View("Tapes_3mpolyurethaneprotectivetape8658dl"); }
+            if (Param == "3m-scotch-weld-structural-adhesive-7246-2-ba-fst") { return View("Tapes_3mscotchweldstructuraladhesive72462bafst"); }
+            if (Param == "3m-scotch-weld-epoxy-adhesive-ec-3501-ba") { return View("Tapes_3mscotchweldepoxyadhesiveec3501ba"); }
+            if (Param == "3m-scotch-weld-structural-adhesive-ec-3984") { return View("Tapes_3mscotchweldstructuraladhesiveec3984"); }
+            if (Param == "3m-scotch-weld-structural-adhesive-ec-7236") { return View("Tapes_3mscotchweldstructuraladhesiveec7236"); }
+            if (Param == "3m-polyurethane-protective-tape-8664hs") { return View("Tapes_3mpolyurethaneprotectivetape8664hs"); }
+            if (Param == "3m-scotch-weld-structural-adhesive-film-af-555") { return View("Tapes_3mscotchweldstructuraladhesivefilmaf555"); }
 
             return View("coating_3mscotch");
         }
