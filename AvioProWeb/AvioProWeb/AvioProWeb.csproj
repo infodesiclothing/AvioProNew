@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\brandController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -371,6 +372,9 @@
     <Content Include="Views\Shared\Tapes_3mscotchweldurethaneadhesiveec3535ba.cshtml" />
     <Content Include="Views\Shared\Tapes_3mscotchweldurethaneadhesiveec3587ba.cshtml" />
     <Content Include="Views\Shared\Tapes_protectivetape8663.cshtml" />
+    <Content Include="Views\brand\ThreeM.cshtml" />
+    <Content Include="Views\brand\LPS.cshtml" />
+    <Content Include="Views\brand\AEROSHELL.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
