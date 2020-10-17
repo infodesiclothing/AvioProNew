@@ -48,9 +48,9 @@ namespace AvioProWeb.Controllers
             {
                 return View("PistonOil");
             }
-            if (Params == "TurbineOil")
+            if (Params == "TURBINE OIL")
             {
-                return View("Turbine_oil");
+                return View("TurbineOil");
             }
             
             return View("COATINGS");

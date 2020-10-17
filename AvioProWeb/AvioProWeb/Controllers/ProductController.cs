@@ -189,6 +189,32 @@ namespace AvioProWeb.Controllers
                 return View("LPS_Corrosion");
             }
             //AeroShell Grease
+
+            if (Param == "AeroGrease6")
+            {
+                return View("Aero_Grease6");
+            }
+            if (Param == "AeroGrease7")
+            {
+                return View("Aero_Grease7");
+            }
+            if (Param == "AeroGrease14")
+            {
+                return View("Aero_Grease14");
+            }
+            if (Param == "AeroGrease22")
+            {
+                return View("Aero_Grease22");
+            }
+            if (Param == "AeroGrease33")
+            {
+                return View("Aero_Grease33");
+            }
+            if (Param == "AeroGrease64")
+            {
+                return View("Aero_Grease64");
+            }
+
             if (Param == "AeroOil100")
             {
                 return View("Aero_Oil100");
@@ -296,9 +322,9 @@ namespace AvioProWeb.Controllers
             {
                 return View("Aero_TurbineOil_308");
             }
-            if (Param == "AeroTurbineOil309")
+            if (Param == "AeroTurbineOil390")
             {
-                return View("Aero_TurbineOil_309");
+                return View("Aero_TurbineOil_390");
             }
             if (Param == "AeroTurbineOil500")
             {
