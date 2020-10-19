@@ -36,7 +36,7 @@
         <div class="navigation-wrap bg-light start-header start-style">
             <div class="container p-0">
                 <div class="d-flex justify-content-end">
-                    <form id="hdTutoForm" method="POST" action="http://aviopro.ideabox.online/" class="mr-3 mr-md-0">
+                    <form id="hdTutoForm" method="POST" action="@Url.Action("Index", "Home")" class="mr-3 mr-md-0">
                         <div class="input-gpfrm input-gpfrm-lg input-group">
                             <input type="text" id="querystr" name="querystr" class="form-control" placeholder="Search">
                             <span class="input-group-addon"><i class="fa fa-search" style="color: rgba(0, 0, 0, 0.29);"></i></span>
@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-12">
                         <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="http://aviopro.ideabox.online/"><img src="~/images/3385-avio-pro-logo.png" alt="Avio Pro" title="Avio Pro"></a>
+                            <a class="navbar-brand" href="@Url.Action("Index", "Home")"><img src="~/images/3385-avio-pro-logo.png" alt="Avio Pro" title="Avio Pro"></a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -58,20 +58,9 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto py-4 py-md-0">
                                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://aviopro.ideabox.online/#" role="button" aria-haspopup="true" aria-expanded="true">OUR PRODUCTS</a>
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="@Url.Action("Index", "Home")" role="button" aria-haspopup="true" aria-expanded="true">OUR PRODUCTS</a>
 
                                         <div class="dropdown-menu">
-                                            @*<a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/coatings">COATINGS</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers">3M Adhesion Promoters &amp; Primers</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/aeroshell-fluids-an-specialities">AEROSHELL FLUIDS AN SPECIALITIES</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/lubricants-penetrants">Lubricants/Penetrants</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives">3M Aerospace Tapes &amp; Adhesives</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/corrosion-inhibitors">Corrosion Inhibitors</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/aero-shell-grease">AERO SHELL GREASE</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/electronic-cleaners">Electronic Cleaners</a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/aero-shell-piston-engine-oil">AERO SHELL PISTON ENGINE OIL </a>
-        <a class="dropdown-item text-uppercase" href="http://aviopro.ideabox.online/category/aeroshell-turbine-oil">AEROSHELL TURBINE OIL</a>*@
-
                                             <a class="dropdown-item text-uppercase" href="@Url.Action("Index","Category",new {Params="Coatings"})">COATINGS</a>
                                             <a class="dropdown-item text-uppercase" href="@Url.Action("Index","Category",new {Params="promoters"})">3M Adhesion Promoters &amp; Primers</a>
                                             <a class="dropdown-item text-uppercase" href="@Url.Action("Index","Category",new {Params="Fluids"})">AEROSHELL FLUIDS AN SPECIALITIES</a>
@@ -96,7 +85,7 @@
                                         </div>
                                     </li>
                                     <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                        <a class="nav-link" href="http://aviopro.ideabox.online/about-us">
+                                        <a class="nav-link" href="@Url.Action("About", "Home")">
                                             ABOUT
                                             US
                                         </a>
@@ -119,22 +108,22 @@
             <div class="container">
                 <div class="row row-flex p-3 align-items-center">
                     <div class="text-muted col-md-2 text-lg-left text-md-left text-center mb-3 mb-lg-0 mb-md-0">
-                        <a href="http://aviopro.ideabox.online/">
+                        <a href="@Url.Action("Index", "Home")">
                             <img src="~/images/avio-pro-logo-white.png" alt="Avio Pro">
                         </a>
                     </div>
                     <div class="text-muted col-md-10 text-lg-right text-md-right text-center text-white">
-                        <a href="http://aviopro.ideabox.online/about-us" class="text-uppercase text-white">
+                        <a href="@Url.Action("About", "Home")" class="text-uppercase text-white">
                             About
                             us
                         </a> /
-                        <a href="http://aviopro.ideabox.online/contact" class="text-uppercase text-white">
+                        <a href="@Url.Action("Contact", "Home")" class="text-uppercase text-white">
                             contact
                             us
                         </a>
                     </div>
                 </div>
-                <p class="mb-0 text-white text-center">© 2020 <a href="http://aviopro.ideabox.online/">Avio Pro</a> . Powered By <a href="http://www.ideabox.com.pk/" target="_blank">IdeaBox</a> </p>
+                <p class="mb-0 text-white text-center">© 2020 <a href="@Url.Action("Index", "Home")">Avio Pro</a> . Powered By <a href="http://www.rightsolutions4u.com/" target="_blank">RightSolutions4u</a> </p>
             </div>
         </footer>
     </div>
@@ -144,7 +133,7 @@
         @RenderSection("scripts", required: false)*@
 
     @Scripts.Render("~/js/jquery-3.1.1.slim.min.js")
-    @Scripts.Render("~/js/jquery.js")
+    @Scripts.Render("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js")
     @Scripts.Render("~/js/tether.min.js")
     @Scripts.Render("~/js/bootstrap.js")
     @Scripts.Render("~/js/owl.carousel.js")
