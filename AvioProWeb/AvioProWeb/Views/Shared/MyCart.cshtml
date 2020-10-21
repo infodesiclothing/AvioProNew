@@ -1,8 +1,9 @@
-﻿@model IEnumerable < AvioProWeb.Models.Cart>
+﻿@model IEnumerable<AvioProWeb.Models.Cart>
 
 @if (Model != null)
-{
-    int count = 0;
+    {
+        int count = 0;
+        string body = "";
 
     <div class="modal-body">
         <div class="login_wrap">
@@ -23,8 +24,8 @@
                         </thead>
                         <tbody>
                             @*@{
-                                int sum = 0;
-                            }*@
+                                    int sum = 0;
+                                }*@
                             @foreach (var item in Model)
                             {
 
@@ -38,6 +39,7 @@
                                     <td>1</td>
                                     <td><button style="font-size:24px;color:red"> <i class="fa fa-trash-o " onclick="location.href='@Url.Action("Delete", "Carts", item)'"></i></button></td>
                                 </tr>
+                                body += "s" + @item.Name + "" + @item.Brand + "" + @item.PartNumber +""+ @item.Units+ "sdfs <br />";
                             }
                             <tr>
                                 @*<td colspan="4" class="text-right"><b>Total: $@sum</b></td>*@
@@ -45,12 +47,53 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button class="btn btn-success" @*onclick="location.href='@Url.Action("AddOrder", "OrderMasters")'"*@>Mail >> </button> <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Index", "Home")'"> Continue Shopping >></button>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Mail >> </button> <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Index", "Home")'"> Continue Shopping >></button>
                 </div>
-                
+
                 @*<div class="mid_divider"></div>*@
-               
+
             </div>
         </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+         
+            <form id="mail" action="~/Category/SendEmail" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Send Email
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Receiver</label>
+                                <input type="text" class="form-control" name="receiver">
+                            </div>
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <input type="text" class="form-control" name="Subject">
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <input type="text" class="form-control" name=@body >
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                Close
+                            </button>
+                            <button type="submit" class="btn btn-primary" @*onclick="location.href='@Url.Action("SendEmail","Category")'"*@>
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </form>
+</div>
+
     </div>
 }

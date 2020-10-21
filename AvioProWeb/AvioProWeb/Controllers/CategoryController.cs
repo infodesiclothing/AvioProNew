@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using AvioProWeb.Models;
@@ -88,7 +90,43 @@ namespace AvioProWeb.Controllers
             }
             
         }
-
+        [HttpPost]
+        public ActionResult SendEmail(string receiver, string subject, string body)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var senderEmail = new MailAddress("smbudhwani@yahoo.com");
+                    var receiverEmail = new MailAddress(receiver, "Receiver");
+                    var password = "Aug31999";
+                    var sub = subject;
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.yahoo.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(senderEmail.Address, password)
+                    };
+                    using (var mess = new MailMessage(senderEmail, receiverEmail)
+                    {
+                        Subject = subject,
+                        Body = body
+                    })
+                    {
+                        smtp.Send(mess);
+                    }
+                    return View();
+                }
+            }
+            catch (Exception e)
+            {
+                ViewBag.Error = "Some Error";
+            }
+            return View();
+        }
         // GET: Category/Details/5
         public ActionResult Details(int id)
         {
