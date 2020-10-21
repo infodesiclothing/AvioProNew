@@ -375,6 +375,8 @@
     <Content Include="Views\brand\ThreeM.cshtml" />
     <Content Include="Views\brand\LPS.cshtml" />
     <Content Include="Views\brand\AEROSHELL.cshtml" />
+    <Content Include="Views\brand\nittotapes.cshtml" />
+    <Content Include="Views\brand\aircrafttyres.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

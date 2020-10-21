@@ -23,6 +23,16 @@ namespace AvioProWeb.Controllers
             {
                 return View("AEROSHELL");
             }
+            if (Params == "AIRCRAFTTYRES")
+            {
+                return View("AIRCRAFTTYRES");
+            }
+            if (Params == "NITTOTAPES")
+            {
+                return View("NITTOTAPES");
+            }
+
+            
 
 
             return View("ThreeM");

@@ -91,19 +91,20 @@ namespace AvioProWeb.Controllers
             
         }
         [HttpPost]
-        public ActionResult SendEmail(string receiver, string subject, string body)
+        public ActionResult SendEmail(string Name, string Email, string Phoneno, string Subject, string body)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var senderEmail = new MailAddress("smbudhwani@yahoo.com");
+                    var senderEmail = new MailAddress("mohtashim.siddiqui74@outlook.com");
+                    var receiver = "mohtashim.siddiqui74@outlook.com";
                     var receiverEmail = new MailAddress(receiver, "Receiver");
-                    var password = "Aug31999";
-                    var sub = subject;
+                    var password = "mohtashim098";
+                    var sub = Subject;
                     var smtp = new SmtpClient
                     {
-                        Host = "smtp.yahoo.com",
+                        Host = "smtp.outlook.com",
                         Port = 587,
                         EnableSsl = true,
                         DeliveryMethod = SmtpDeliveryMethod.Network,
@@ -112,7 +113,7 @@ namespace AvioProWeb.Controllers
                     };
                     using (var mess = new MailMessage(senderEmail, receiverEmail)
                     {
-                        Subject = subject,
+                        Subject = Subject,
                         Body = body
                     })
                     {

@@ -5,7 +5,7 @@
             <div class="row">
                 <nav aria-label="breadcrumb" class="w-100">
                     <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="http://aviopro.ideabox.online/">Home</a></li>
+                        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="breadcrumb-item active">COATINGS</li>
                     </ol>
                 </nav>
@@ -28,7 +28,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
-                                                @*<a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-tamper-proof-sealant-ec-1252-">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>*@
+                                                @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch1252"})">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>*@
                                                 <a href="@Url.Action("Index", "Product",new { Param="3MScotch1252"})">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>
                                             </p>
 
@@ -38,7 +38,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
-                                                @*<a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-hi-temp-sealer-ec-1137">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137</a>*@
+                                                @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch1137"})">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137 </a>*@
                                                 <a href="@Url.Action("Index", "Product",new { Param="3MScotch1137"})">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137 </a>
                                             </p>
 
@@ -48,7 +48,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
-                                                @*<a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-fuel-resistant-coating-ec-776">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>*@
+                                                @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch776"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>*@
                                                 <a href="@Url.Action("Index", "Product",new { Param="3MScotch776"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>
                                             </p>
 
@@ -58,7 +58,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
-                                                @*<a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-fuel-resistant-coating-ec-776sr">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>*@
+                                                @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch776SR"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>*@
                                                 <a href="@Url.Action("Index", "Product",new { Param="3MScotch776SR"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>
                                             </p>
 
@@ -68,7 +68,7 @@
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
-                                                @*<a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-elastomeric-coating-ec-5816">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>*@
+                                                @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch5816"})">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>*@
                                                 <a href="@Url.Action("Index", "Product",new { Param="3MScotch5816"})">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>
                                             </p>
 

@@ -5,9 +5,9 @@
             <div class="row">
                 <nav aria-label="breadcrumb" class="w-100">
                     <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="http://aviopro.ideabox.online/">Home</a></li>
+                        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="breadcrumb-item">
-                            <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives">3M Aerospace Tapes &amp; Adhesives</a>
+                            <a href="@Url.Action("Index","Category",new {Params="Tapes"})">3M Aerospace Tapes &amp; Adhesives</a>
                         </li>
                         <li class="breadcrumb-item active">3M™ Scotch-Weld™ Structural Adhesive Film AF 3185</li>
                     </ol>
@@ -38,7 +38,7 @@
                                 <h5 class="Poppins-Bold">3M™ Scotch-Weld™ Structural Adhesive Film AF 3185</h5>
                                 <hr class="border-dark mb-0 mt-0">
                                 <p class="font-14">
-                                    Part Number: AF 3185 | Brand: <a href="http://aviopro.ideabox.online/brand/"></a>
+                                    Part Number: AF 3185 | Brand: <a href="@Url.Action("Index","Brand",new {Params="ThreeM"})">3M</a>
                                 </p>
 
                                 <div class="row row-eq-height">

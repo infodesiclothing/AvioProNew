@@ -5,9 +5,9 @@
             <div class="row">
                 <nav aria-label="breadcrumb" class="w-100">
                     <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="http://aviopro.ideabox.online/">Home</a></li>
+                        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="breadcrumb-item">
-                            <a href="http://aviopro.ideabox.online/category/electronic-cleaners">Electronic Cleaners</a>
+                            <a href="@Url.Action("Index","Category",new {Params="Cleaners"})">Electronic Cleaners</a>
                         </li>
                         <li class="breadcrumb-item active">NoFlash Electro Contact Cleaner</li>
                     </ol>

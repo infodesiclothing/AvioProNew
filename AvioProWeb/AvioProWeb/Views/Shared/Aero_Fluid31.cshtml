@@ -6,9 +6,9 @@
             <div class="row">
                 <nav aria-label="breadcrumb" class="w-100">
                     <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="http://aviopro.ideabox.online/">Home</a></li>
+                        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="breadcrumb-item">
-                            <a href="http://aviopro.ideabox.online/category/aeroshell-fluids-an-specialities">AEROSHELL FLUIDS AN SPECIALITIES</a>
+                            <a href="@Url.Action("Index","Category",new {Params="Fluids"})">AEROSHELL FLUIDS AN SPECIALITIES</a>
                         </li>
                         <li class="breadcrumb-item active">AERO SHELL FLUID 31</li>
                     </ol>

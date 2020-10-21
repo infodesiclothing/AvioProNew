@@ -5,9 +5,9 @@
             <div class="row">
                 <nav aria-label="breadcrumb" class="w-100">
                     <ol class="breadcrumb bg-white">
-                        <li class="breadcrumb-item"><a href="http://aviopro.ideabox.online/">Home</a></li>
+                        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
                         <li class="breadcrumb-item">
-                            <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives">3M Aerospace Tapes &amp; Adhesives</a>
+                            <a href="@Url.Action("Index","Category",new {Params="Tapes"})">3M Aerospace Tapes &amp; Adhesives</a>
                         </li>
                         <li class="breadcrumb-item active">3M™ Scotch-Weld™ Bracket Bonding Adhesive EC-7202</li>
                     </ol>
@@ -33,19 +33,19 @@
 
                                             <div id="collapse1" class="card-body collapse p-0" data-parent="#accordion">
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-tamper-proof-sealant-ec-1252-">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MScotch1252"})">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-hi-temp-sealer-ec-1137">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MScotch1137"})">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137 </a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-fuel-resistant-coating-ec-776">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MScotch776"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-fuel-resistant-coating-ec-776sr">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MScotch776SR"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/coatings/product/3m-scotch-weld-elastomeric-coating-ec-5816">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MScotch5816"})">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>
                                                 </p>
                                             </div>
                                             <div class="card-header collapsed" data-toggle="collapse" href="#collapse4">
@@ -56,61 +56,61 @@
 
                                             <div id="collapse4" class="card-body collapse p-0" data-parent="#accordion">
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ew-5000">3M™ Scotch-Weld™ Structural Adhesives Primer EW-5000</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters5000"})">3M™ Scotch-Weld™ Structural Adhesives Primer EW-5000 </a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ew-5000as">3M™ Scotch-Weld™ Structural Adhesives Primer EW-5000AS</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters5000AS"})">3M™ Scotch-Weld™ Structural Adhesives Primer EW-5000AS </a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-surface-pre-treatment-ac-131">3M™ Surface Pre-Treatment AC-131</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters131"})">3M™ Surface Pre-Treatment AC-131</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-adhesion-promoter-86a">3M™ Adhesion Promoter 86A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters86A"})">3M™ Adhesion Promoter 86A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-adhesion-promoter-ac-132">3M™ Adhesion Promoter AC-132</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters132"})">3M™ Adhesion Promoter AC-132</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-surface-pre-treatment-ac-130-2">3M™ Surface Pre-Treatment AC-130-2</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters130"})">3M™ Surface Pre-Treatment AC-130-2</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-1945-ba">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1945 B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters1945"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1945 B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-adhesion-promoter-ac-137">3M™ Adhesion Promoter AC-137</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters137"})">3M™ Adhesion Promoter AC-137</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-adhesion-promoter-ac-160">3M™ Adhesion Promoter AC-160</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters160"})">3M™ Adhesion Promoter AC-160</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesive-primer-ew-5005">3M™ Scotch-Weld™ Structural Adhesive Primer EW-5005</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters5005"})">3M™ Scotch-Weld™ Structural Adhesive Primer EW-5005</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-3960">3M™ Scotch-Weld™ Structural Adhesives Primer EC-3960</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters3960"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-3960</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-2333">3M™ Scotch-Weld™ Structural Adhesives Primer EC-2333</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters2333"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-2333</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-2174">3M™ Scotch-Weld™ Structural Adhesives Primer EC-2174</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters2174"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-2174</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-3924b">3M™ Scotch-Weld™ Structural Adhesives Primer EC-3924B</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters3924"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-3924B</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-metal-primer-ec-3901">3M™ Scotch-Weld™ Metal Primer EC-3901</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters3901"})">3M™ Scotch-Weld™ Metal Primer EC-3901</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-1593">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1593</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters1593"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1593</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-1660">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1660</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters1660"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1660</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-3917">3M™ Scotch-Weld™ Structural Adhesives Primer EC-3917</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters3917"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-3917</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-adhesion-promoters--primers/product/3m-scotch-weld-structural-adhesives-primer-ec-1290">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1290</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3MPromoters1290"})">3M™ Scotch-Weld™ Structural Adhesives Primer EC-1290</a>
                                                 </p>
                                             </div>
                                             <div class="card-header collapsed" data-toggle="collapse" href="#collapse7">
@@ -121,118 +121,118 @@
 
                                             <div id="collapse7" class="card-body collapse p-0" data-parent="#accordion">
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8663">3M™ Polyurethane Protective Tape 8663</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8663"})">3M™ Polyurethane Protective Tape 8663</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8681hs">3M™ Polyurethane Protective Tape 8681HS</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8681hs"})">3M™ Polyurethane Protective Tape 8681HS</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8547">3M™ Polyurethane Protective Tape 8547</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8547"})">3M™ Polyurethane Protective Tape 8547</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-1751-ba">3M™ Scotch-Weld™ Epoxy Adhesive EC-1751 B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-1751-ba"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-1751 B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-adhesivesealant-ec-3537-na-ba">3M™ Scotch-Weld™ Adhesive/Sealant EC-3537-NA B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-adhesivesealant-ec-3537-na-ba"})">3M™ Scotch-Weld™ Adhesive/Sealant EC-3537-NA B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesive-film-af-15">3M™ Scotch-Weld™ Structural Adhesive Film AF 15</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-structural-adhesive-film-af-15"})">3M™ Scotch-Weld™ Structural Adhesive Film AF 15</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-3531-ba-fr">3M™ Scotch-Weld™ Epoxy Adhesive EC-3531 B/A FR</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-3531-ba-fr"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-3531 B/A FR</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8730na">3M™ Polyurethane Protective Tape 8730NA</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8730na"})">3M™ Polyurethane Protective Tape 8730NA</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8673">3M™ Polyurethane Protective Tape 8673</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8673"})">3M™ Polyurethane Protective Tape 8673</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8671">3M™ Polyurethane Protective Tape 8671</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8671"})">3M™ Polyurethane Protective Tape 8671</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-bracket-bonding-adhesive-ec-7202">3M™ Scotch-Weld™ Bracket Bonding Adhesive EC-7202</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-bracket-bonding-adhesive-ec-7202"})">3M™ Scotch-Weld™ Bracket Bonding Adhesive EC-7202</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-protective-tape-application-solution">3M™ Protective Tape Application Solution</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-protective-tape-application-solution"})">3M™ Protective Tape Application Solution</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-urethane-adhesive-ec-3532-ba">3M™ Scotch-Weld™ Urethane Adhesive EC-3532 B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-urethane-adhesive-ec-3532-ba"})">3M™ Scotch-Weld™ Urethane Adhesive EC-3532 B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-neoprene-high-performance-rubber-and-gasket-adhesive-ec-1300">3M™ Scotch-Weld™ Neoprene High Performance Rubber and Gasket Adhesive EC-1300</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-neoprene-high-performance-rubber-and-gasket-adhesive-ec-1300"})">3M™ Scotch-Weld™ Neoprene High Performance Rubber and Gasket Adhesive EC-1300</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8544">3M™ Polyurethane Protective Tape 8544</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8544"})">3M™ Polyurethane Protective Tape 8544</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-3537-na-ba">3M™ Scotch-Weld™ Epoxy Adhesive EC-3537-NA B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-3537-na-ba"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-3537-NA B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-urethane-adhesive-ec-3587-ba">3M™ Scotch-Weld™ Urethane Adhesive EC-3587 B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-urethane-adhesive-ec-3587-ba"})">3M™ Scotch-Weld™ Urethane Adhesive EC-3587 B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-urethane-adhesive-ec-3535-ba">3M™ Scotch-Weld™ Urethane Adhesive EC-3535 B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-urethane-adhesive-ec-3535-ba"})">3M™ Scotch-Weld™ Urethane Adhesive EC-3535 B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-2216-ba-gray">3M™ Scotch-Weld™ Epoxy Adhesive EC-2216 B/A Gray</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-2216-ba-gray"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-2216 B/A Gray</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-neoprene-high-performance-contact-adhesive-ec-1357">3M™ Scotch-Weld™ Neoprene High Performance Contact Adhesive EC-1357</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-neoprene-high-performance-contact-adhesive-ec-1357"})">3M™ Scotch-Weld™ Neoprene High Performance Contact Adhesive EC-1357</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8734na">3M™ Polyurethane Protective Tape 8734NA</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8734na"})">3M™ Polyurethane Protective Tape 8734NA</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-2216-ba-translucent">3M™ Scotch-Weld™ Epoxy Adhesive EC-2216 B/A Translucent</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-2216-ba-translucent"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-2216 B/A Translucent</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-2792-ba">3M™ Scotch-Weld™ Epoxy Adhesive EC-2792 B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-2792-ba"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-2792 B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesive-film-af-3185">3M™ Scotch-Weld™ Structural Adhesive Film AF 3185</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-structural-adhesive-film-af-3185"})">3M™ Scotch-Weld™ Structural Adhesive Film AF 3185</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-repair-paste-rp-2220">3M™ Scotch-Weld™ Repair Paste RP-2220</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-repair-paste-rp-2220"})">3M™ Scotch-Weld™ Repair Paste RP-2220</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8663dl">3M™ Polyurethane Protective Tape 8663DL</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8663dl"})">3M™ Polyurethane Protective Tape 8663DL</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesive-ec-1458">3M™ Scotch-Weld™ Structural Adhesive EC-1458</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3M-Scotch-Weld-Structural-Adhesive-EC-1458"})">3M™ Scotch-Weld™ Structural Adhesive EC-1458</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesives-ec-3964">3M™ Scotch-Weld™ Structural Adhesives EC-3964</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-structural-adhesives-ec-3964"})">3M™ Scotch-Weld™ Structural Adhesives EC-3964</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-1838">3M™ Scotch-Weld™ Epoxy Adhesive EC-1838</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-1838"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-1838</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-1469">3M™ Scotch-Weld™ Epoxy Adhesive EC-1469</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-1469"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-1469</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8657">3M™ Polyurethane Protective Tape 8657</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8658dl"})">3M™ Polyurethane Protective Tape 8658DL</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8658dl">3M™ Polyurethane Protective Tape 8658DL</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8658dl"})">3M™ Polyurethane Protective Tape 8658DL</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesive-7246-2-ba-fst">3M™ Scotch-Weld™ Structural Adhesive 7246-2 B/A FST</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-structural-adhesive-7246-2-ba-fst"})">3M™ Scotch-Weld™ Structural Adhesive 7246-2 B/A FST</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-epoxy-adhesive-ec-3501-ba">3M™ Scotch-Weld™ Epoxy Adhesive EC-3501 B/A</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-epoxy-adhesive-ec-3501-ba"})">3M™ Scotch-Weld™ Epoxy Adhesive EC-3501 B/A</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesive-ec-3984">3M™ Scotch-Weld™ Structural Adhesive EC-3984</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-structural-adhesive-ec-3984"})">3M™ Scotch-Weld™ Structural Adhesive EC-3984</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesive-ec-7236">3M™ Scotch-Weld™ Structural Adhesive EC-7236</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-structural-adhesive-ec-7236"})">3M™ Scotch-Weld™ Structural Adhesive EC-7236</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-polyurethane-protective-tape-8664hs">3M™ Polyurethane Protective Tape 8664HS</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-polyurethane-protective-tape-8664hs"})">3M™ Polyurethane Protective Tape 8664HS</a>
                                                 </p>
                                                 <p class="font-14 mb-0 border-bottom border-dark p-3">
-                                                    <a href="http://aviopro.ideabox.online/category/3m-aerospace-tapes--adhesives/product/3m-scotch-weld-structural-adhesive-film-af-555">3M™ Scotch-Weld™ Structural Adhesive Film AF 555</a>
+                                                    <a href="@Url.Action("Index", "Product",new { Param="3m-scotch-weld-structural-adhesive-film-af-555"})">3M™ Scotch-Weld™ Structural Adhesive Film AF 555</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -245,7 +245,7 @@
                                 <h5 class="Poppins-Bold">3M™ Scotch-Weld™ Bracket Bonding Adhesive EC-7202</h5>
                                 <hr class="border-dark mb-0 mt-0">
                                 <p class="font-14">
-                                    Part Number: EC-7202 | Brand: <a href="http://aviopro.ideabox.online/brand/3m">3M</a>
+                                    Part Number: EC-7202 | Brand: <a href="@Url.Action("Index","Brand",new {Params="ThreeM"})">3M</a>
                                 </p>
 
                                 <div class="row row-eq-height">
