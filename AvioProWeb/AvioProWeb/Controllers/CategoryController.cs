@@ -91,42 +91,36 @@ namespace AvioProWeb.Controllers
             
         }
         [HttpPost]
-        public ActionResult SendEmail(string Name, string Email, string Phoneno, string Subject, string body)
+        [ValidateInput(false)]
+        public ActionResult SendEmail(string Name, string Email, string Phoneno, string Subject, string bodytxt)
         {
             try
             {
-                if (ModelState.IsValid)
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress("Info@avio-pro.com");
+                message.To.Add("Info@avio-pro.com");
+                message.Bcc.Add("mohtashim.siddiqui74@outlook.com");
+                message.Subject = Subject;
+                message.Body = bodytxt;
+                message.IsBodyHtml = true;
+
+                var client = new SmtpClient("smtp.outlook.com", 587)
                 {
-                    var senderEmail = new MailAddress("mohtashim.siddiqui74@outlook.com");
-                    var receiver = "mohtashim.siddiqui74@outlook.com";
-                    var receiverEmail = new MailAddress(receiver, "Receiver");
-                    var password = "mohtashim098";
-                    var sub = Subject;
-                    var smtp = new SmtpClient
-                    {
-                        Host = "smtp.outlook.com",
-                        Port = 587,
-                        EnableSsl = true,
-                        DeliveryMethod = SmtpDeliveryMethod.Network,
-                        UseDefaultCredentials = false,
-                        Credentials = new NetworkCredential(senderEmail.Address, password)
-                    };
-                    using (var mess = new MailMessage(senderEmail, receiverEmail)
-                    {
-                        Subject = Subject,
-                        Body = body
-                    })
-                    {
-                        smtp.Send(mess);
-                    }
-                    return View();
-                }
+                    UseDefaultCredentials = true,
+                    Credentials = new NetworkCredential("mohtashim.siddiqui74@outlook.com", "mohtashim098"),
+                    EnableSsl = true
+                };
+                client.Send(message);
+
+                //return View();
+                return View("~/Views/Home/Index");
+
             }
             catch (Exception e)
             {
                 ViewBag.Error = "Some Error";
             }
-            return View();
+            return View("~/Home/Index.cshtml");
         }
         // GET: Category/Details/5
         public ActionResult Details(int id)

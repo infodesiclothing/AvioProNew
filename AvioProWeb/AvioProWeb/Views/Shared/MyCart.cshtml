@@ -1,17 +1,10 @@
 ﻿@model IEnumerable<AvioProWeb.Models.Cart>
 <link rel="stylesheet" href="~/Content/default.css">
-<script type="text/javascript">
-    $('#exampleModal').on('show.bs.modal', function (e) {
-        var btext = $(e.relatedTarget).data('body');
-        alert(btext);
-        $('#body').text(btext);
 
-    })
-</script>
 @if (Model != null)
-    {
-        int count = 0;
-        var body = "";
+{
+    int count = 0;
+    var body = "";
 
     <div class="modal-body">
         <div class="login_wrap">
@@ -20,56 +13,66 @@
                     <div class="form-group">
                         <h2><span>Your Cart </span></h2>
                     </div>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th style="font-size:10px">Name</th>
-                                <th style="font-size:10px">Brand</th>
-                                <th style="font-size:10px">PartNumber</th>
-                                <th style="font-size:10px">Units</th>
-                                <th style="font-size:10px">Remove</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @{ 
-                                body = "< table class='table table-bordered'>";
-                                body += "<thead>";
-                                body += "< tr>";
-                                body += "< th style = 'font-size:10px' > Name </ th >";
-                                body += "< th style='font-size:10px'>Brand</th>";
-                                body += "< th style = 'font-size:10px' > PartNumber </ th >";
-                                body += "< th style='font-size:10px'>Units</th>";
-                                body += "< th style='font-size:10px'>body</th>";
-                            }
-                            @*@{
-                                    int sum = 0;
-                                }*@
-                            @foreach (var item in Model)
-                            {
+                    @{
+                        body = "<table class='table table-bordered' style=''>";
+                        body += "<thead>";
+                        body += "<tr>";
+                        body += "<th style='font-size:10px'>Name</th>";
+                        body += "<th style='font-size:10px'>Brand</th>";
+                        body += "<th style='font-size:10px'>PartNumber</th>";
+                        body += "<th style='font-size:10px'>Units</th>";
+                        body += "<th style='font-size:10px'>Remove</th>";
+                        body += "</tr>";
+                        body += "</thead>";
+                        body += "<tbody>";
+                     }
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="font-size:10px">Name</th>
+                                            <th style="font-size:10px">Brand</th>
+                                            <th style="font-size:10px">PartNumber</th>
+                                            <th style="font-size:10px">Units</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
 
-                                //sum = Convert.ToInt32(@item.SellPri) + sum;
-                                count = count + 1;
-                                body += "s" + @item.Name + "" + @item.Brand + "" + @item.PartNumber + "" + @item.Units + "sdfs <br />";
-                                <tr>
-                                    <td>@item.Name</td>
-                                    <td>@item.Brand</td>
-                                    <td> @item.PartNumber</td>
-                                    <td>@item.Units</td>
-                                    <td>1</td>
-                                    <td>@body</td>
-                                    <td><button style="font-size:24px;color:red"> <i class="fa fa-trash-o " onclick="location.href='@Url.Action("Delete", "Carts", item)'"></i></button></td>
-                                </tr>
+                                            //sum = Convert.ToInt32(@item.SellPri) + sum;
+                                            count = count + 1;
+                                            body += "<tr>";
+                                            body += "<td>" + @item.Name + "</td>";
+                                            body += "<td>" + @item.Brand + "</td>";
+                                            body += "<td>" + @item.PartNumber + "</td>";
+                                            body += "<td>" + @item.Units + "</td>";
+                                            body += "</tr>";
+                                            <tr>
+                                                <td>@item.Name</td>
+                                                <td>@item.Brand</td>
+                                                <td> @item.PartNumber</td>
+                                                <td>@item.Units</td>
+                                                <td>1</td>
+                                                <td><button style="font-size:24px;color:red"> <i class="fa fa-trash-o " onclick="location.href='@Url.Action("Delete", "Carts", item)'"></i></button></td>
+                                            </tr>
 
-                            }
-                            <tr>
-                                @*<td colspan="4" class="text-right"><b>Total: $@sum</b></td>*@
-                                <td colspan="5" class="text-left"><b>Total: @count</b></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" onclick="$('#body').val('@body')">Mail >> </button> 
-                    <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Index", "Home")'"> Continue Shopping >></button>
-                </div>
+                                        }
+                                        <tr>
+                                            @*<td colspan="4" class="text-right"><b>Total: $@sum</b></td>*@
+                                            <td colspan="5" class="text-left">
+                                                <b>Total: @count</b>
+                                                <input type="hidden" id="bodyval" value="@body" />
+                                            </td>
+                                        </tr>
+                                        @{ 
+                                            body += "</tbody>";
+                                            body += "</table>";
+                                        }
+                                    </tbody>
+                                </table>
+                                <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-id="@body">Mail >> </button>
+                                <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Index", "Home")'"> Continue Shopping >></button>
+                    </div>
 
                 @*<div class="mid_divider"></div>*@
 
@@ -79,35 +82,38 @@
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-         
+
             <form id="mail" action="~/Category/SendEmail" method="post">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                                Send Email
-                            </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Send Email
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="Name">
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" name="Name">
-                            </div>
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="text" class="form-control" name="Email">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone No.</label>
-                                <input type="text" class="form-control" name="Phoneno">
-                            </div>
-                            <div class="form-group">
-                                <label>Subject</label>
-                                <input type="text" class="form-control" name="Subject">
-                                <input type="text" name="body">
-                            </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" name="Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone No.</label>
+                            <input type="text" class="form-control" name="Phoneno">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" class="form-control" name="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <textarea id="bodytxt" name="bodytxt" class="form-control" ></textarea>
+                        </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -118,8 +124,18 @@
                             </button>
                         </div>
                     </div>
-                </form>
-</div>
+            </form>
+        </div>
 
     </div>
 }
+<script src="~/js/jquery-3.1.1.slim.min.js"></script
+><script type="text/javascript">
+    $(document).ready(function () {
+        $('#exampleModal').on('show.bs.modal', function (e) {
+            var btext = $(e.relatedTarget).data('id');
+            $('#bodytxt').val(btext);
+        });
+    });
+
+</script>
