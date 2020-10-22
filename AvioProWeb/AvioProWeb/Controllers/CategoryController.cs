@@ -57,6 +57,14 @@ namespace AvioProWeb.Controllers
             
             return View("COATINGS");
         }
+        public ActionResult DeleteCart(Cart cart)
+        {
+            List<Cart> li = (List<Cart>)Session["cart"];
+            li.RemoveAll(x => x.PartNumber == cart.PartNumber && x.Brand==cart.Brand && x.Name==cart.Name && x.Units==cart.Units);
+            Session["cart"] = li;
+            Session["count"] = Convert.ToInt32(Session["count"]) - 1;
+            return View("MyCart", (List<Cart>)Session["cart"]);
+        }
         public ActionResult AddCart(string PartNumber, string Brand, string Name, string Units)
         {
             Cart cart = new Cart
@@ -100,6 +108,7 @@ namespace AvioProWeb.Controllers
                 message.From = new MailAddress("Info@avio-pro.com");
                 message.To.Add("Info@avio-pro.com");
                 message.Bcc.Add("mohtashim.siddiqui74@outlook.com");
+                message.Bcc.Add("smbudhwani@yahoo.com");
                 message.Subject = Subject;
                 message.Body = bodytxt;
                 message.IsBodyHtml = true;
@@ -112,15 +121,16 @@ namespace AvioProWeb.Controllers
                 };
                 client.Send(message);
 
-                //return View();
-                return View("~/Views/Home/Index");
+                //return View("~/Index/Home");
+                return RedirectToAction("Index");
 
             }
             catch (Exception e)
             {
                 ViewBag.Error = "Some Error";
             }
-            return View("~/Home/Index.cshtml");
+            //return View("~/Index/Home");
+            return RedirectToAction("Index");
         }
         // GET: Category/Details/5
         public ActionResult Details(int id)

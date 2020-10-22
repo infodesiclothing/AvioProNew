@@ -53,7 +53,7 @@
                                                 <td> @item.PartNumber</td>
                                                 <td>@item.Units</td>
                                                 <td>1</td>
-                                                <td><button style="font-size:24px;color:red"> <i class="fa fa-trash-o " onclick="location.href='@Url.Action("Delete", "Carts", item)'"></i></button></td>
+                                                <td><button style="font-size:24px;color:red"> <i class="fa fa-trash-o " onclick="location.href='@Url.Action("DeleteCart", "Category", item)'"></i></button></td>
                                             </tr>
 
                                         }
@@ -119,9 +119,8 @@
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                 Close
                             </button>
-                            <button type="submit" class="btn btn-primary">
-                                Send
-                            </button>
+                            <button type="submit" class="btn btn-primary" onclick="sendmail()">  Send </button>
+                            
                         </div>
                     </div>
             </form>
@@ -139,3 +138,21 @@
     });
 
 </script>
+ @*<script>
+     function sendmail() {
+         var body = $('#bodyval').val();
+                                    var pwd = $('#UserPassword').val();
+                                    $.ajax({
+                                        url: '@Url.Action("Login", "Account")',
+                                        type: 'POST',
+                                        data: { "UserId": userId, "UserPassword": pwd }
+                                        , success: function (result) {
+                                           $('#welcome').replaceWith(result);
+                                        }
+                                        , error: function (result) {
+                                            alert("err " + result.responseText);
+                                            $('#welcome').replaceWith(result);
+                                            }
+                                        })
+                                }
+ </script>*@
