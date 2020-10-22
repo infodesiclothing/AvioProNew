@@ -105,18 +105,30 @@ namespace AvioProWeb.Controllers
             try
             {
                 MailMessage message = new MailMessage();
-                message.From = new MailAddress("Info@avio-pro.com");
-                message.To.Add("Info@avio-pro.com");
-                message.Bcc.Add("mohtashim.siddiqui74@outlook.com");
-                message.Bcc.Add("smbudhwani@yahoo.com");
+                //message.From = new MailAddress("Info@avio-pro.com");
+                message.From = new MailAddress("avio-pro@outlook.com");
+                //message.To.Add("Info@avio-pro.com");
+                message.To.Add("mohtashim.siddiqui74@outlook.com");
+                message.Bcc.Add("avio-pro@outlook.com");
                 message.Subject = Subject;
-                message.Body = bodytxt;
+                var Message = bodytxt;
+                Message += "<br><br>";
+                Message += "<table class='table table-bordered' Border='1'>";
+                Message += "<tr><td style='font-size:12px'><b>Name</b></td>";
+                Message += "<td>" + Name + "</td><tr>";
+                Message += "<tr><td style='font-size:12px'><b>Email</b></td>";
+                Message += "<td>" + Email + "</td><tr>";
+                Message += "<tr><td style='font-size:12px'><b>Phone No.</b></td>";
+                Message += "<td>" + Phoneno + "</td><tr></table>";
+
+
+                message.Body = Message;
                 message.IsBodyHtml = true;
 
                 var client = new SmtpClient("smtp.outlook.com", 587)
                 {
                     UseDefaultCredentials = true,
-                    Credentials = new NetworkCredential("mohtashim.siddiqui74@outlook.com", "mohtashim098"),
+                    Credentials = new NetworkCredential("avio-pro@outlook.com", "rsm@aviopro"),
                     EnableSsl = true
                 };
                 client.Send(message);

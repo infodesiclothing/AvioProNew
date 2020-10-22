@@ -14,7 +14,7 @@
                         <h2><span>Your Cart </span></h2>
                     </div>
                     @{
-                        body = "<table class='table table-bordered' style=''>";
+                        body = "<table class='table table-bordered' border='1'>";
                         body += "<thead>";
                         body += "<tr>";
                         body += "<th style='font-size:10px'>Name</th>";
@@ -29,10 +29,10 @@
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th style="font-size:10px">Name</th>
-                                            <th style="font-size:10px">Brand</th>
-                                            <th style="font-size:10px">PartNumber</th>
-                                            <th style="font-size:10px">Units</th>
+                                            <th style="font-size:14px" align="left">Name</th>
+                                            <th style="font-size:14px" align="left">Brand</th>
+                                            <th style="font-size:14px" align="left">PartNumber</th>
+                                            <th style="font-size:14px" align="left">Units</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -111,8 +111,8 @@
                             <input type="text" class="form-control" name="Subject">
                         </div>
                         <div class="form-group">
-                            <label>Subject</label>
-                            <textarea id="bodytxt" name="bodytxt" class="form-control" ></textarea>
+                            <input type="hidden" name="bodytxt" id="bodytxt"/>                           
+                            @*<textarea id="bodytxt" name="bodytxt" class="form-control" ></textarea>*@
                         </div>
                         </div>
                         <div class="modal-footer">
