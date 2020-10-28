@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvioPro</title>
+    <style>
+        #menu,
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            z-index:999;
+        }
+
+        #menu {
+            width: 960px;
+            margin: 60px auto;
+            border: 1px solid #222;
+            background-color: #181818;
+            /*background-image: linear-gradient(#444, #111);*/
+            border-radius: 6px;
+            box-shadow: 0 1px 1px #777;
+            z-index: 999;
+            width: 1100px;
+        }
+
+            #menu:before,
+            #menu:after {
+                content: "";
+                display: table;
+            }
+
+            #menu:after {
+                clear: both;
+            }
+
+        #menu {
+            zoom: 1;
+            z-index: 999;
+        }
+
+            #menu li {
+                float: left;
+                border-right: 1px solid #222;
+                box-shadow: 1px 0 0 #444;
+                position: relative;
+                z-index: 999;
+            }
+
+            #menu a {
+                float: left;
+                padding: 12px 30px;
+                color: #999;
+                text-transform: uppercase;
+                font: bold 12px Arial, Helvetica;
+                text-decoration: none;
+                text-shadow: 0 1px 0 #000;
+            }
+
+            #menu li:hover > a {
+                color: #fafafa;
+            }
+
+            *html #menu li a:hover { /* IE6 only */
+                color: #fafafa;
+            }
+
+            #menu ul {
+                margin: 20px 0 0 0;
+                _margin: 0; /*IE6 only*/
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                top: 38px;
+                left: 0;
+                z-index: 1;
+                background: #444;
+                background: linear-gradient(#444, #111);
+                box-shadow: 0 -1px 0 rgba(255,255,255,.3);
+                border-radius: 3px;
+                transition: all .2s ease-in-out;
+            }
+
+            #menu li:hover > ul {
+                opacity: 1;
+                visibility: visible;
+                margin: 0;
+            }
+
+            #menu ul ul {
+                top: 0;
+                left: 150px;
+                margin: 0 0 0 20px;
+                _margin: 0; /*IE6 only*/
+                box-shadow: -1px 0 0 rgba(255,255,255,.3);
+                z-index: 500;
+            }
+
+            #menu ul li {
+                float: none;
+                display: block;
+                border: 0;
+                _line-height: 0; /*IE6 only*/
+                box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+            }
+
+                #menu ul li:last-child {
+                    box-shadow: none;
+                }
+
+            #menu ul a {
+                padding: 10px;
+                width: 260px;
+                _height: 10px; /*IE6 only*/
+                display: block;
+                white-space: nowrap;
+                float: none;
+                text-transform: none;
+            }
+
+                #menu ul a:hover {
+                    background-color: #F76D2B;
+                    /*background-image: linear-gradient(#04acec, #0186ba);*/
+                }
+
+            #menu ul li:first-child > a {
+                border-radius: 3px 3px 0 0;
+            }
+
+                #menu ul li:first-child > a:after {
+                    content: '';
+                    position: absolute;
+                    left: 40px;
+                    top: -6px;
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;
+                    border-bottom: 6px solid #444;
+                }
+
+            #menu ul ul li:first-child a:after {
+                left: -6px;
+                top: 50%;
+                margin-top: -6px;
+                border-left: 0;
+                border-bottom: 6px solid transparent;
+                border-top: 6px solid transparent;
+                border-right: 6px solid #3b3b3b;
+            }
+
+            #menu ul li:first-child a:hover:after {
+                border-bottom-color: #04acec;
+            }
+
+            #menu ul ul li:first-child a:hover:after {
+                border-right-color: #0299d3;
+                border-bottom-color: transparent;
+            }
+
+            #menu ul li:last-child > a {
+                border-radius: 0 0 3px 3px;
+            }
+    </style>
+    @Styles.Render("~/assets/css/bootstrap.min.css")
+    @Styles.Render("~/assets/css/style.css")
+    @Styles.Render("~/assets/css/owl.carousel.css")
+    @Styles.Render("~/assets/css/owl.transitions.css")
+    @Styles.Render("~/assets/css/slick.css")
+    @Styles.Render("~/assets/css/bootstrap-slider.min.css")
+    @Styles.Render("~/assets/css/font-awesome.min.css")
+
+    @*@Styles.Render("~/assets/colors/red.css")*@
+    @Styles.Render("~/assets/colors/orange.css")
+    //<!-- <link rel="stylesheet" href="assets/colors/blue.css"> -->
+    //<!--<link rel="stylesheet" href="assets/colors/pink.css">-->
+    //<!--<link rel="stylesheet" href="assets/colors/green.css">-->
+    @*@Styles.Render("~/assets/colors/purple.css")*@
+    @*<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">*@
+    <!-- Google-Font-->
+    @Styles.Render("https://fonts.googleapis.com/css?family=Lato:300,400,700,900")
+    @Scripts.Render("https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+    @Scripts.Render("~/assets/js/responsiveslides.min.js")
+    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>*@
+    @*<script src="responsiveslides.min.js"></script>*@
+
+    <script>
+        $(window).on('load', function () {
+            var jq = jQuery.noConflict();
+            jq(document).ready(function () {
+                $("#rslides").responsiveSlides({
+                    auto: true,
+                    pager: false,
+                    nav: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            if ($.browser.msie && $.browser.version.substr(0, 1) < 7) {
+                $('li').has('ul')
+                    .mouseover(function () {
+                        $(this).children('ul').css('visibility', 'visible');
+                    })
+                    .mouseout(function () {
+                        $(this).children('ul').css('visibility', 'hidden');
+                    })
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="default-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-2">
+                        <div class="logo"> <a href="@Url.Action("Index", "Home")"><img src="~/images/logo.png" alt="image" width="160" height="80" /></a> </div>
+                    </div>
+                    <div class="col-sm-9 col-md-10">
+                        <div class="header_info">
+                            <div class="header_widgets">
+                                <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
+                                <p class="uppercase_text">For Support Mail us : </p>
+                                <a href="mailto:info@example.com">info@avio-pro.com</a>
+                            </div>
+                            <div class="header_widgets">
+                                <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
+                                <p class="uppercase_text">Service Helpline Call Us: </p>
+                                <a href="tel:971-56-661-2433">+ 971 56 661 2433</a>
+                            </div>
+                            <!-- <div class="social-follow">
+                          <ul>
+                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                          </ul>
+                        </div> -->
+                            <!-- <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        @*<nav id="navigation_bar" class="navbar navbar-expand-lg">*@
+            <div class="container">
+                <div class="navbar-header">
+                    <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggler" type="button"> <i class="fa fa-bars"></i> </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul id="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="@Url.Action("About", "Home")">About</a></li>
+                        <li>
+                            <a href="#">Our Products</a>
+                            <ul>
+                                <li>
+                                    <a href="#">AEROSHELL</a>
+                                    <ul>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Fluids"})"})">AEROSHELL FLUIDS AN SPECIALITIES</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="GREASE"})"})">GREASE</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PistonOIL"})">PISTON ENGINE OIL</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="TURBINE OIL"})">TURBINE OIL</a></li>
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <a href="#">PPG</a>
+                                    <ul>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PPG_FuelTankPS"})">Fuel Tank/Proven Standards</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PPG_FuelTankHP"})">Fuel Tank/High Performance Options</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PPG_CorrosionInhibitive"})">Corrosion Inhibitive</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PPG_ElectricallyConductive"})">Electrically Conductive</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PPG_FastCure"})">Fast Cure/Flight Line Repair</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PPG_AdhesionPromoters"})">Adhesion Promoters</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="PPG_SpecialtyProducts"})">Specialty Products</a></li>
+
+                                    </ul>
+
+                                </li>
+                                <li>
+                                    <a href="#">3M PRODUCTS</a>
+                                    <ul>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="promoters"})"})">3M™ Adhesion Promoters & Primers</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Coatings"})">Coatings</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Tapes"})">3M Aerospace Tapes & Adhesives</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">LPS</a>
+                                    <ul>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Lubricants"})">Lubricants/Penetrants</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Corrosion"})">Corrosion Inhibitors</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Cleaners"})">Electronic Cleaners</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">TAPES</a>
+                                    <ul>
+                                        <li><a href="#">Cabin</a></li>
+                                        <li><a href="#">Cargo Hold</a></li>
+                                        <li><a href="#">Body</a></li>
+                                        <li><a href="#">Window</a></li>
+                                        <li><a href="#">Engine</a></li>
+                                        <li><a href="#">Wire Harness</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">AIRCRAFT TIRES</a>
+                                    <ul>
+                                        <li><a href="#">BridgeStone</a></li>
+                                        <li><a href="#">Dunlop</a></li>
+                                        <li><a href="#">GoodYear</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">AIRCRAFT PARTS</a>
+                                    <ul>
+                                        <li><a href="#">Boeing</a></li>
+                                        <li><a href="#">Air Bus</a></li>
+                                        <li><a href="#">Cessna</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">AVIATION FUEL</a>
+                                    <ul>
+                                        <li><a href="#">Avgas 100LL</a></li>
+                                        <li><a href="#">Jet A-1</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        @*</nav>*@
+        <!-- Navigation end -->
+       
+    </header>
+    <!-- /Header -->
+   
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h6>Top Categores</h6>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Vision</a></li>
+                                <li><a href="#">Mission</a></li>
+                                <li><a href="#">Products</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6>About Us</h6>
+                            <ul>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Cookies</a></li>
+                                <li><a href="#">Terms of use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6>Useful Links</h6>
+                            <ul>
+                                <li><a href="#">Our Partners</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Sitemap</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <p class="copy-right">Copyright &copy; 2020 AvioPro.com. All Rights Reserved</p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="footer_widget">
+                                <p>Connect with Us:</p>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @Scripts.Render("~/assets/js/jquery.min.js")
+    @Scripts.Render("~/assets/js/popper.min.js")
+    @Scripts.Render("~/assets/js/bootstrap.min.js")
+    @Scripts.Render("~/assets/js/interface.js")
+    <!--bootstrap-slider-JS-->
+    @Scripts.Render("~/assets/js/bootstrap-slider.min.js")
+    <!--Slider-JS-->
+    @Scripts.Render("~/assets/js/slick.min.js")
+    @Scripts.Render("~/assets/js/owl.carousel.min.js")
+</body>
+</html>

@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5B89E73-830E-4D23-A1BB-725B7820B5DD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AvioPro</RootNamespace>
+    <AssemblyName>AvioPro</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44351</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\brandController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\colors\blue.css" />
+    <Content Include="assets\colors\green.css" />
+    <Content Include="assets\colors\orange.css" />
+    <Content Include="assets\colors\pink.css" />
+    <Content Include="assets\colors\purple.css" />
+    <Content Include="assets\colors\red.css" />
+    <Content Include="assets\css\bootstrap-slider.css" />
+    <Content Include="assets\css\bootstrap-slider.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\default.css" />
+    <Content Include="assets\css\font-awesome.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\home-new.css" />
+    <Content Include="assets\css\menu.css" />
+    <Content Include="assets\css\owl.carousel.css" />
+    <Content Include="assets\css\owl.transitions.css" />
+    <Content Include="assets\css\slick.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\js\bootstrap-slider.js" />
+    <Content Include="assets\js\bootstrap-slider.min.js" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\countdown_date.js" />
+    <Content Include="assets\js\interface.js" />
+    <Content Include="assets\js\jquery.countdown.min.js" />
+    <Content Include="assets\js\jquery.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\menu.js" />
+    <Content Include="assets\js\owl.carousel.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\responsiveslides.js" />
+    <Content Include="assets\js\responsiveslides.min.js" />
+    <Content Include="assets\js\slick.min.js" />
+    <Content Include="assets\js\stuHover.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="images\100x60.png" />
+    <Content Include="images\1920x250.jpg" />
+    <Content Include="images\1920x400.jpg" />
+    <Content Include="images\1920x830.jpg" />
+    <Content Include="images\200x200.jpg" />
+    <Content Include="images\220x220.jpg" />
+    <Content Include="images\222x172.jpg" />
+    <Content Include="images\2453-aircreaft-logo.png" />
+    <Content Include="images\300x300.jpg" />
+    <Content Include="images\3385-avio-pro-logo.png" />
+    <Content Include="images\3854-aeroshell-logo.png" />
+    <Content Include="images\3Mlogo3.png" />
+    <Content Include="images\600x380.jpg" />
+    <Content Include="images\600x380_2.jpg" />
+    <Content Include="images\700x450.jpg" />
+    <Content Include="images\7118-nitto-logo.png" />
+    <Content Include="images\80x80.png" />
+    <Content Include="images\850x500.jpg" />
+    <Content Include="images\900x560.jpg" />
+    <Content Include="images\900x560_2.jpg" />
+    <Content Include="images\90x90.jpg" />
+    <Content Include="images\960x870.jpg" />
+    <Content Include="images\about.jpg" />
+    <Content Include="images\addmore_img.png" />
+    <Content Include="images\aviation.jpg" />
+    <Content Include="images\avio-pro-logo-white.png" />
+    <Content Include="images\banner1.jpg" />
+    <Content Include="images\banner1old.jpg" />
+    <Content Include="images\banner2.jpeg" />
+    <Content Include="images\banner2old.jpg" />
+    <Content Include="images\banner3.jpg" />
+    <Content Include="images\banner3old.jpg" />
+    <Content Include="images\bg-pettern-1.png" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\car-img-01.png" />
+    <Content Include="images\car-img-02.png" />
+    <Content Include="images\car-img-03.png" />
+    <Content Include="images\change_logo.png" />
+    <Content Include="images\compfilter.jpg" />
+    <Content Include="images\favicon-icon\apple-touch-icon-144-precomposed.png" />
+    <Content Include="images\favicon-icon\apple-touch-icon-57-precomposed.png" />
+    <Content Include="images\favicon-icon\apple-touch-icon-72-precomposed.png" />
+    <Content Include="images\favicon-icon\favicon.png" />
+    <Content Include="images\featured-img-01.jpg" />
+    <Content Include="images\featured-img-02.jpg" />
+    <Content Include="images\featured-img-03.jpg" />
+    <Content Include="images\icon-80x80-2.png" />
+    <Content Include="images\icon-80x80-3.png" />
+    <Content Include="images\icon-80x80-4.png" />
+    <Content Include="images\icon-80x80.png" />
+    <Content Include="images\industiral.jpg" />
+    <Content Include="images\intro-bg-3.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\lps.jpg" />
+    <Content Include="images\mission.jpg" />
+    <Content Include="images\no-image.png" />
+    <Content Include="images\our-history.jpg" />
+    <Content Include="images\Our-Prescence.png" />
+    <Content Include="images\our-wearhouses.jpg" />
+    <Content Include="images\PPG\img1.jpg" />
+    <Content Include="images\PPG\img2.jpg" />
+    <Content Include="images\PPG\img3.jpg" />
+    <Content Include="images\PPG\img4.jpg" />
+    <Content Include="images\PPG\img5.jpg" />
+    <Content Include="images\PPG\ppglogo.png" />
+    <Content Include="images\products\3MPolyurethane ProtectiveTape8658DL.jpg" />
+    <Content Include="images\products\3MPolyurethaneProtectiveTape544.jpg" />
+    <Content Include="images\products\3MScotch-WeldFuelResistantCoatingEC-776.jpg" />
+    <Content Include="images\products\3MScotch-WeldStructuralAdhesiveFilmAF15.jpg" />
+    <Content Include="images\products\3MScotch-WeldStructuralAdhesiveFilmAF555.jpg" />
+    <Content Include="images\products\3mtm-scotch-weldtm-structural-adhesive-primer-ec-1945-b-a.jpg" />
+    <Content Include="images\products\3M™ Adhesion Promoter AC-137.jpg" />
+    <Content Include="images\products\3M™ Adhesion Promoter AC-160.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8547.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8657.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8663.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8663DL.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8664HS.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8673.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8681HS.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8730NA.jpg" />
+    <Content Include="images\products\3M™ Polyurethane Protective Tape 8734.jpg" />
+    <Content Include="images\products\3M™ Protective Tape Application Solution.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Bracket Bonding Adhesive EC-7202.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Elastomeric Coating EC-5816.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-1469.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-1751.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-1838.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-2216 Gray.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-2216.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-2792.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-3501.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-3531.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Epoxy Adhesive EC-3537-NA.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Metal Primer EC-3901.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Neoprene High Performance Contact Adhesive EC-1357.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Neoprene High Performance Rubber and Gasket Adhesive EC-1300.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Repair Paste RP-2220.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesive 7246-2.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesive EC-1458.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesive EC-3984.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesive EC-7236.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesive Film AF 3185.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesive Primer EW-5005.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives EC-3964.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-1290.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-1593.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-1660.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-2174.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-2333.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-3917.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-3924B.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EC-3960.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EW-5000 %281USQ CAN%29.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Structural Adhesives Primer EW-5000AS %281USQ CAN%29.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Urethane Adhesive EC-3532.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Urethane Adhesive EC-3535.jpg" />
+    <Content Include="images\products\3M™ Scotch-Weld™ Urethane Adhesive EC-3587.jpg" />
+    <Content Include="images\products\3M™ Surface Pre-Treatment AC-130-2.jpg" />
+    <Content Include="images\products\3M™ Surface Pre-Treatment AC-131.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL 5MA %28 1 X 5USG %29.png" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL CALIBRATES FLUID 2 %28 1 X 202L%29.png" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL COMPOUND 7 %28 1 X 5USG %29.png" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 12 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 2XN %28 1 X 5USG %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 3 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 31 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 41 %28 1 X 203L %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 41 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 41 %28 4 X 5L %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 602 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID 61 %28 1 X 55USG  %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL FLUID S.8350 %28 1 X 20L %29.jpg" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL LANDING GEAR FLUID %28 1 X 5USG %29.png" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES\AERO SHELL SMOKE OIL %28 1 X 55USG %29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 14 %2830X.40KG%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 14 %284X3KG CAN%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 22 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 22 %28170 KG DRUM%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 22 %2830X.40KG%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 22 %284X3KG CAN%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 33 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 33 %2830X.40KG%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 33 %284X3KG CAN%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 6 %2830X.40KG%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 64 %2830X.40KG%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 64 %284X3KG CAN%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 7 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 7 %2830X.40KG%29.jpg" />
+    <Content Include="images\products\greases\AERO SHELL GREASE 7 %284X3KG CAN%29.jpg" />
+    <Content Include="images\products\greases\AEROSHELLGREASE6%284X3KGCAN%29.jpg" />
+    <Content Include="images\products\lps\CFCFREE.jpg" />
+    <Content Include="images\products\lps\CHAIN MATE.jpg" />
+    <Content Include="images\products\lps\Dry Film PTFE.jpg" />
+    <Content Include="images\products\lps\Electro 140°.jpg" />
+    <Content Include="images\products\lps\Electro Contact Cleaner.jpg" />
+    <Content Include="images\products\lps\LPS 1.jpg" />
+    <Content Include="images\products\lps\LPS 2.jpg" />
+    <Content Include="images\products\lps\LPS 3.jpg" />
+    <Content Include="images\products\lps\LST.jpg" />
+    <Content Include="images\products\lps\NoFlash 2.0.jpg" />
+    <Content Include="images\products\lps\NoFlash.jpg" />
+    <Content Include="images\products\new\CCTVSolutions.jpg" />
+    <Content Include="images\products\new\CCTVSolutions.png" />
+    <Content Include="images\products\new\Detectors&amp;Instruments.png" />
+    <Content Include="images\products\new\EASTMAN2197.png" />
+    <Content Include="images\products\new\EASTMAN2380.png" />
+    <Content Include="images\products\new\eastmanSKYDROL500B-4.jpg" />
+    <Content Include="images\products\new\eastmanSKYDROL500B-4.png" />
+    <Content Include="images\products\new\eastmanSKYDROLLD4.png" />
+    <Content Include="images\products\new\FireFightingEquipments.png" />
+    <Content Include="images\products\new\FirePumpsControlers.png" />
+    <Content Include="images\products\new\HavolineEnergy.png" />
+    <Content Include="images\products\new\HavolineProDSFullySyntheticECO5.png" />
+    <Content Include="images\products\new\HavolineUltraR.png" />
+    <Content Include="images\products\new\HavolineUltraV.jpg" />
+    <Content Include="images\products\new\HavolineUltraV.png" />
+    <Content Include="images\products\new\MOBILGREASE28.png" />
+    <Content Include="images\products\new\MOBILGREASESHC100.png" />
+    <Content Include="images\products\new\MOBILJETOIL2.jpg" />
+    <Content Include="images\products\new\MOBILJETOIL2.png" />
+    <Content Include="images\products\new\MOBILJETOIL254.png" />
+    <Content Include="images\products\new\MOBILJETOIL387.png" />
+    <Content Include="images\products\new\OilandLubricants.jpeg" />
+    <Content Include="images\products\new\OilandLubricants.jpg" />
+    <Content Include="images\products\new\PPG Sealants Down SLider.png" />
+    <Content Include="images\products\new\PPG-Sealants-Down-SLider.jpg" />
+    <Content Include="images\products\new\Safety Equipments Down Slider.jpg" />
+    <Content Include="images\products\new\Safety-Equipments-Down-Slid1.jpg" />
+    <Content Include="images\products\new\tyresbridgestone.png" />
+    <Content Include="images\products\new\tyresdunlop.png" />
+    <Content Include="images\products\new\tyresgoodyear.jpg" />
+    <Content Include="images\products\new\tyresgoodyear.png" />
+    <Content Include="images\products\new\tyresMICHELIN.png" />
+    <Content Include="images\products\nittotapes\11611-MB.jpg" />
+    <Content Include="images\products\nittotapes\224PR.jpg" />
+    <Content Include="images\products\nittotapes\3648F.jpg" />
+    <Content Include="images\products\nittotapes\7239.jpg" />
+    <Content Include="images\products\nittotapes\7288.jpg" />
+    <Content Include="images\products\nittotapes\AEROSEAL SC-140.jpg" />
+    <Content Include="images\products\nittotapes\NO. 21.jpg" />
+    <Content Include="images\products\nittotapes\NO. 223S.jpg" />
+    <Content Include="images\products\nittotapes\P-100.jpg" />
+    <Content Include="images\products\nittotapes\P-11.jpg" />
+    <Content Include="images\products\nittotapes\P-12L.jpg" />
+    <Content Include="images\products\nittotapes\P-212.jpg" />
+    <Content Include="images\products\nittotapes\P-212HD.jpg" />
+    <Content Include="images\products\nittotapes\P-212WHT.jpg" />
+    <Content Include="images\products\nittotapes\P-213LW.jpg" />
+    <Content Include="images\products\nittotapes\P-221.jpg" />
+    <Content Include="images\products\nittotapes\P-222.jpg" />
+    <Content Include="images\products\nittotapes\P-223.jpg" />
+    <Content Include="images\products\nittotapes\P-224.jpg" />
+    <Content Include="images\products\nittotapes\p-306.jpg" />
+    <Content Include="images\products\nittotapes\P-306L.jpg" />
+    <Content Include="images\products\nittotapes\P-412.jpg" />
+    <Content Include="images\products\nittotapes\P-421.jpg" />
+    <Content Include="images\products\nittotapes\P-422.jpg" />
+    <Content Include="images\products\nittotapes\P-423.jpg" />
+    <Content Include="images\products\nittotapes\P-430.jpg" />
+    <Content Include="images\products\nittotapes\P-50.jpg" />
+    <Content Include="images\products\nittotapes\P-51.jpg" />
+    <Content Include="images\products\nittotapes\P-55.jpg" />
+    <Content Include="images\products\nittotapes\P-703.jpg" />
+    <Content Include="images\products\nittotapes\PS-1.jpg" />
+    <Content Include="images\products\nittotapes\PS-2.jpg" />
+    <Content Include="images\products\nittotapes\SPV-224PR.jpg" />
+    <Content Include="images\products\nittotapes\SPV-9320.jpg" />
+    <Content Include="images\products\nittotapes\SPV-C SERIES.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL 100 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL 100 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL 100 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL 15W50 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL 15W50 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL D ULTRA %2812 X 1L%29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL SPORT PLUS 4 %2812 X 1L%29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL W100 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL W100 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL W100 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL W100 PLUS %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL W120 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL W80 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\products\PISTON ENGINE OIL\AERO SHELL OIL W80 %28 12 X 1USQ%29.jpg" />
+    <Content Include="images\products\ppg\pint pack size pic.jpg" />
+    <Content Include="images\products\ppg\semi kit pack size pic.png" />
+    <Content Include="images\products\ppg\US QUART KIT PACK SIZE PIC.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 02 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 02 %28 1 X 5USG%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 03 %28 1X 55USG%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 03 %28 1X 5USG%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 390 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 500 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 500 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 555 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 555 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 560 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 560 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL 750 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AERO SHELL TURBINE OIL ASCENDER %2824 X 1USQ%29.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AEROSHELLTURBINEOIL308%2824XU.jpg" />
+    <Content Include="images\products\TURBINE ENGINE OIL\AEROSHELLTURBINEOIL308%2824XUSQ%29.jpg" />
+    <Content Include="images\products\__MACOSX\industries\._about.html" />
+    <Content Include="images\products\__MACOSX\industries\._blog.html" />
+    <Content Include="images\products\__MACOSX\industries\._contact.html" />
+    <Content Include="images\products\__MACOSX\industries\._index.html" />
+    <Content Include="images\products\__MACOSX\industries\._project-single.html" />
+    <Content Include="images\products\__MACOSX\industries\._projects.html" />
+    <Content Include="images\products\__MACOSX\industries\._services.html" />
+    <Content Include="images\products\__MACOSX\industries\._single.html" />
+    <Content Include="images\products\__MACOSX\industries\css\._animate.css" />
+    <Content Include="images\products\__MACOSX\industries\css\._bootstrap-grid.css" />
+    <Content Include="images\products\__MACOSX\industries\css\._bootstrap-reboot.css" />
+    <Content Include="images\products\__MACOSX\industries\css\._bootstrap.css" />
+    <Content Include="images\products\__MACOSX\industries\css\._jquery.fancybox.min.css" />
+    <Content Include="images\products\__MACOSX\industries\css\._owl.carousel.min.css" />
+    <Content Include="images\products\__MACOSX\industries\css\._style.css" />
+    <Content Include="images\products\__MACOSX\industries\css\.__bootstrap.css" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\css\._font-awesome.min.css" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\fonts\._fontawesome-webfont.svg" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\._cheatsheet.html" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\css\._ionicons.css" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\css\._ionicons.min.css" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\fonts\._ionicons.svg" />
+    <Content Include="images\products\__MACOSX\industries\images\._about_1.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._about_2.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._hero_1.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._hero_2.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._hero_3.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._img_1.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._img_2.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._img_3.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._img_4.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._person_1.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._person_2.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._person_3.jpg" />
+    <Content Include="images\products\__MACOSX\industries\images\._person_4.jpg" />
+    <Content Include="images\products\__MACOSX\industries\js\._bootstrap.min.js" />
+    <Content Include="images\products\__MACOSX\industries\js\._jquery-3.2.1.min.js" />
+    <Content Include="images\products\__MACOSX\industries\js\._jquery.fancybox.min.js" />
+    <Content Include="images\products\__MACOSX\industries\js\._jquery.waypoints.min.js" />
+    <Content Include="images\products\__MACOSX\industries\js\._main.js" />
+    <Content Include="images\products\__MACOSX\industries\js\._owl.carousel.min.js" />
+    <Content Include="images\products\__MACOSX\industries\js\._popper.min.js" />
+    <Content Include="images\safteyitems.jpg" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\Technical.jpg" />
+    <Content Include="images\tyres.jpg" />
+    <Content Include="images\upload\FeaturedImages\14-AERO SHELL TURBINE OIL 03 %28 1X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\1563-AERO SHELL FLUID 31 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\1643-AERO SHELL SMOKE OIL %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\1667-AERO SHELL GREASE 33 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\1898-AERO SHELL TURBINE OIL 555 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\1936-AERO SHELL TURBINE OIL 560 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\1961-AERO SHELL GREASE 6 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\2368-AERO SHELL TURBINE OIL 308 %28 24 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\2745-AERO SHELL LANDING GEAR FLUID %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\2896-AERO SHELL GREASE 14 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\3024-AERO SHELL TURBINE OIL 500 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\3153-AERO SHELL TURBINE OIL 750 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\3435-AERO SHELL GREASE 22 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\3544-AERO SHELL FLUID 602 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\4087-AERO SHELL FLUID 3 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\4227-AERO SHELL FLUID 12 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\4321-AERO SHELL FLUID 41 %28 4 X 5L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\4452-AERO SHELL FLUID S.8350 %28 1 X 20L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\4700-AERO SHELL 5MA %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\4766-AERO SHELL FLUID 2XN %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\5169-AERO SHELL FLUID 61 %28 1 X 55USG  %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\5272-AERO SHELL TURBINE OIL 02 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\6203-AERO SHELL GREASE 64 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\6903-AERO SHELL GREASE 7 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\7465-AERO SHELL TURBINE OIL 390 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\7687-AERO SHELL COMPOUND 7 %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\8696-AERO SHELL CALIBRATES FLUID 2 %28 1 X 202L%29.png" />
+    <Content Include="images\upload\FeaturedImages\9398-AERO SHELL TURBINE OIL ASCENDER %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL 5MA %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL CALIBRATES FLUID 2 %28 1 X 202L%29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL COMPOUND 7 %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 12 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 2XN %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 3 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 31 %28 6 X 1USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 41 %28 1 X 203L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 41 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 41 %28 4 X 5L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 602 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID 61 %28 1 X 55USG  %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL FLUID S.8350 %28 1 X 20L %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 14 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 14 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %28170 KG DRUM%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 22 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 33 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 33 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 33 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 6 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 6 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 64 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 64 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 7 %2817 KG PAIL%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 7 %2830X.40KG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL GREASE 7 %284X3KG CAN%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL LANDING GEAR FLUID %28 1 X 5USG %29.png" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 100 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 100 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 100 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 15W50 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL 15W50 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL D ULTRA %2812 X 1L%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL SPORT PLUS 4 %2812 X 1L%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 %28 1 X 5USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W100 PLUS %28 12 X 1USQ %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W120 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W80 %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL OIL W80 %28 12 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL SMOKE OIL %28 1 X 55USG %29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 02 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 02 %28 1 X 5USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 03 %28 1X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 03 %28 1X 5USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 308 %28 24 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 390 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 500 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 500 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 555 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 555 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 560 %28 1 X 55USG%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 560 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 750 %2824 X 1USQ%29.jpg" />
+    <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL ASCENDER %2824 X 1USQ%29.jpg" />
+    <Content Include="images\vision.jpg" />
+    <Content Include="images\website side logo.jpg" />
+    <Content Include="menu.htm" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="assets\.DS_Store" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="images\products\FLUIDS AND SPECIALITIES.zip" />
+    <Content Include="images\products\industries.zip" />
+    <Content Include="images\products\nitto tapes.zip" />
+    <Content Include="images\products\nittotapes\PS-1.webp" />
+    <Content Include="images\products\__MACOSX\industries\._css" />
+    <Content Include="images\products\__MACOSX\industries\._fonts" />
+    <Content Include="images\products\__MACOSX\industries\._images" />
+    <Content Include="images\products\__MACOSX\industries\._js" />
+    <Content Include="images\products\__MACOSX\industries\._scss" />
+    <Content Include="images\products\__MACOSX\industries\css\._bootstrap.css.map" />
+    <Content Include="images\products\__MACOSX\industries\fonts\._.DS_Store" />
+    <Content Include="images\products\__MACOSX\industries\fonts\._fontawesome" />
+    <Content Include="images\products\__MACOSX\industries\fonts\._ionicons" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\._css" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\._fonts" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\fonts\._fontawesome-webfont.eot" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\fonts\._fontawesome-webfont.ttf" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\fonts\._fontawesome-webfont.woff" />
+    <Content Include="images\products\__MACOSX\industries\fonts\fontawesome\fonts\._fontawesome-webfont.woff2" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\._.DS_Store" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\._css" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\._fonts" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\fonts\._ionicons.eot" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\fonts\._ionicons.ttf" />
+    <Content Include="images\products\__MACOSX\industries\fonts\ionicons\fonts\._ionicons.woff" />
+    <Content Include="images\products\__MACOSX\industries\images\._.DS_Store" />
+    <Content Include="images\products\__MACOSX\industries\scss\._bootstrap-grid.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\._bootstrap-reboot.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\._mixins" />
+    <Content Include="images\products\__MACOSX\industries\scss\._style.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\._utilities" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__alert.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__badge.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__bootstrap.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__breadcrumb.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__button-group.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__buttons.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__card.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__carousel.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__close.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__code.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__custom-forms.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__dropdown.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__forms.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__functions.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__grid.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__images.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__input-group.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__jumbotron.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__list-group.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__media.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__mixins.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__modal.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__nav.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__navbar.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__pagination.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__popover.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__print.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__progress.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__reboot.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__root.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__tables.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__tooltip.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__transitions.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__type.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__utilities.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\.__variables.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__alert.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__background-variant.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__badge.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__border-radius.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__box-shadow.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__breakpoints.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__buttons.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__caret.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__clearfix.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__float.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__forms.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__gradients.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__grid-framework.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__grid.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__hover.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__image.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__list-group.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__lists.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__nav-divider.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__pagination.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__reset-text.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__resize.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__screen-reader.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__size.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__table-row.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__text-emphasis.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__text-hide.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__text-truncate.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__transition.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\mixins\.__visibility.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__align.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__background.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__borders.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__clearfix.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__display.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__embed.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__flex.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__float.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__position.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__screenreaders.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__shadows.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__sizing.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__spacing.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__text.scss" />
+    <Content Include="images\products\__MACOSX\industries\scss\utilities\.__visibility.scss" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldrepairpasterp2220.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldstructuraladhesive72462bafst.cshtml" />
+    <Content Include="Views\Shared\Tapes_3MScotchWeldStructuralAdhesiveEC1458.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldstructuraladhesiveec3984.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldstructuraladhesiveec7236.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldstructuraladhesivefilmaf15.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldstructuraladhesivefilmaf3185.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldstructuraladhesivefilmaf555.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldstructuraladhesivesec3964.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldurethaneadhesiveec3532ba.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldurethaneadhesiveec3535ba.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldurethaneadhesiveec3587ba.cshtml" />
+    <Content Include="Views\Shared\Tapes_protectivetape8663.cshtml" />
+    <Content Include="Views\Shared\LPS_140Cleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_2NoFlashCleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_CFCCleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_ChainMate.cshtml" />
+    <Content Include="Views\Shared\LPS_Corrosion.cshtml" />
+    <Content Include="Views\Shared\LPS_ElectroCleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_GreaseLess.cshtml" />
+    <Content Include="Views\Shared\LPS_HeavyDuty.cshtml" />
+    <Content Include="Views\Shared\LPS_NoFlashCleaners.cshtml" />
+    <Content Include="Views\Shared\LPS_Penetrant.cshtml" />
+    <Content Include="Views\Shared\LPS_PTFE.cshtml" />
+    <Content Include="Views\Shared\MyCart.cshtml" />
+    <Content Include="Views\Shared\PistonEngineOil.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1290.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters130.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters131.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters132.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters137.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1593.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters160.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1660.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters1945.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters2174.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters2333.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3901.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3917.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3924.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters3960.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters5000.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters5000AS.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters5005.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters776SR.cshtml" />
+    <Content Include="Views\Shared\Promoters_3MPromoters86A.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8544.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8547.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8657.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8658dl.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8663dl.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8664hs.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8671.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8673.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8681hs.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8730na.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mpolyurethaneprotectivetape8734na.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mprotectivetapeapplicationsolution.cshtml" />
+    <Content Include="Views\Shared\Tapes_3msadhesiveec1300.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldadhesivesealantec3537naba.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldbracketbondingadhesiveec7202.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec1469.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec1751ba.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec1838.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec2216bagray.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec2216batranslucent.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec2792ba.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec3501ba.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec3531bafr.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldepoxyadhesiveec3537naba.cshtml" />
+    <Content Include="Views\Shared\Tapes_3mscotchweldneoprenehighper1357.cshtml" />
+    <Content Include="Views\Shared\Aero_Compound7.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid12.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid2.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid2XN.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid3.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid31.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid41.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid5MA.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid602.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid61.cshtml" />
+    <Content Include="Views\Shared\Aero_Fluid8350.cshtml" />
+    <Content Include="Views\Shared\Aero_GearFluid.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease14.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease22.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease33.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease6.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease64.cshtml" />
+    <Content Include="Views\Shared\Aero_Grease7.cshtml" />
+    <Content Include="Views\Shared\Aero_Oil100.cshtml" />
+    <Content Include="Views\Shared\Aero_Oil100Pl.cshtml" />
+    <Content Include="Views\Shared\Aero_OilDUltra.cshtml" />
+    <Content Include="Views\Shared\Aero_OilSPlus4.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW100.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW120.cshtml" />
+    <Content Include="Views\Shared\Aero_OilW80.cshtml" />
+    <Content Include="Views\Shared\Aero_SmokeOil.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_2.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_2EU.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_3.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_308.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_390.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_500.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_555.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_560.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_560_b.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_750.cshtml" />
+    <Content Include="Views\Shared\Aero_TurbineOil_Ascender.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch1137.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch1252.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch5816.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch776.cshtml" />
+    <Content Include="Views\Shared\coating_3MScotch776SR.cshtml" />
+    <Content Include="Views\Category\AdhesionPromoters.cshtml" />
+    <Content Include="Views\Category\AEROSHELL_Fluids.cshtml" />
+    <Content Include="Views\Category\AeroShell_Grease.cshtml" />
+    <Content Include="Views\Category\AerospaceTapes.cshtml" />
+    <Content Include="Views\Category\COATINGS.cshtml" />
+    <Content Include="Views\Category\CorrosionInhibitors.cshtml" />
+    <Content Include="Views\Category\Electronic_Cleaners.cshtml" />
+    <Content Include="Views\Category\Lubricants.cshtml" />
+    <Content Include="Views\Category\PistonOil.cshtml" />
+    <Content Include="Views\Category\TurbineOil.cshtml" />
+    <Content Include="Views\Category\View_Coating.cshtml" />
+    <Content Include="Views\brand\AEROSHELL.cshtml" />
+    <Content Include="Views\brand\aircrafttyres.cshtml" />
+    <Content Include="Views\brand\LPS.cshtml" />
+    <Content Include="Views\brand\nittotapes.cshtml" />
+    <Content Include="Views\brand\ThreeM.cshtml" />
+    <Content Include="Views\Shared\About.cshtml" />
+    <Content Include="Views\Category\PPG_FuelTankPS.cshtml" />
+    <Content Include="Views\Category\PPG_FuelTankHP.cshtml" />
+    <Content Include="Views\Category\PPG_CorrosionInhibitive.cshtml" />
+    <Content Include="Views\Category\PPG_ElectricallyConductive.cshtml" />
+    <Content Include="Views\Category\PPG_FastCure.cshtml" />
+    <Content Include="Views\Category\PPG_AdhesionPromoters.cshtml" />
+    <Content Include="Views\Category\PPG_SpecialtyProducts.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65404</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44351/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
