@@ -1051,31 +1051,31 @@ table {
 	2.1 Navigation & Dropdown Menu 
 ------------------------------------------*/
 #navigation_bar {
-    background: #111111 none repeat scroll 0 0;
+    background: #FFFFFF none repeat scroll 0 0;
     border-radius: 0;
     padding: 0;
 }
 
 #navigation {
     padding: 0;
-    /* max-height:90px; */
+     max-height:90px; 
 }
 
 nav.navbar {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+   /* background: #efefef none repeat scroll 0 0;*/
     border: medium none;
     margin: 0 auto;
 }
 
 .navbar-expand-lg .navbar-nav > li {
-    margin: 0 4px 0 0;
+   /* margin: 0 4px 0 0;
     padding: 0px;
     border-radius: 0px;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-    -ms-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;*/
+   /* -ms-transition-duration: 0.3s;*/
 }
 
 .navbar-expand-lg .navbar-nav > .active > a,
@@ -1152,7 +1152,7 @@ nav.navbar {
 .navbar-nav > li > .dropdown-menu li:hover,
 .navbar-expand-lg .navbar-nav li:hover .dropdown-menu li:hover,
 .dropdown-menu > .active > li, .dropdown-menu > .active > li:focus, .dropdown-menu > .active > li:hover, .dropdown-menu > li > li:focus, .dropdown-menu > li :hover {
-    background: #111;
+    background: #FFFFFF;
 }
 
 .navbar-nav > li > .dropdown-menu li:last-child {
@@ -1171,6 +1171,9 @@ nav.navbar {
         display: block;
     }
 
+    .navbar-expand-sm .navbar-nav > li.dropdown:hover .dropdown-menu {
+        display: block;
+    }
     .navbar-nav > li > .dropdown-menu {
         top: 80px;
         display: block !important;
@@ -1190,6 +1193,7 @@ nav.navbar {
         -moz-transition: .4s;
     }
 }
+
 
 
 
@@ -1377,7 +1381,7 @@ nav.navbar {
         }
 
 .about .image {
-    background: url("../../images/about.jpg") center center no-repeat;
+    background: url("../../images/About.jpg") center center no-repeat;
     background-size: cover;
     min-height: 400px;
 }

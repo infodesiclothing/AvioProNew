@@ -90,7 +90,7 @@
 
             #menu ul ul {
                 top: 0;
-                left: 150px;
+                left: 250px;
                 margin: 0 0 0 20px;
                 _margin: 0; /*IE6 only*/
                 box-shadow: -1px 0 0 rgba(255,255,255,.3);
@@ -171,9 +171,9 @@
 
     @*@Styles.Render("~/assets/colors/red.css")*@
     @Styles.Render("~/assets/colors/orange.css")
-    //<!-- <link rel="stylesheet" href="assets/colors/blue.css"> -->
-    //<!--<link rel="stylesheet" href="assets/colors/pink.css">-->
-    //<!--<link rel="stylesheet" href="assets/colors/green.css">-->
+    <!-- <link rel="stylesheet" href="assets/colors/blue.css"> -->
+    <!--<link rel="stylesheet" href="assets/colors/pink.css">-->
+    <!--<link rel="stylesheet" href="assets/colors/green.css">-->
     @*@Styles.Render("~/assets/colors/purple.css")*@
     @*<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.png">
@@ -234,23 +234,13 @@
                             <div class="header_widgets">
                                 <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
                                 <p class="uppercase_text">For Support Mail us : </p>
-                                <a href="mailto:info@example.com">info@avio-pro.com</a>
+                                <a href="mailto:info@avio-pro.com">info@avio-pro.com</a>
                             </div>
                             <div class="header_widgets">
                                 <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-                                <p class="uppercase_text">Service Helpline Call Us: </p>
+                                <p class="uppercase_text">Call Us: </p>
                                 <a href="tel:971-56-661-2433">+ 971 56 661 2433</a>
                             </div>
-                            <!-- <div class="social-follow">
-                          <ul>
-                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                          </ul>
-                        </div> -->
-                            <!-- <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div> -->
                         </div>
                     </div>
                 </div>
@@ -258,7 +248,7 @@
         </div>
 
         <!-- Navigation -->
-        @*<nav id="navigation_bar" class="navbar navbar-expand-lg">*@
+        <nav id="navigation_bar" class="navbar navbar-expand-sm">
             <div class="container">
                 <div class="navbar-header">
                     <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggler" type="button"> <i class="fa fa-bars"></i> </button>
@@ -313,12 +303,12 @@
                                 <li>
                                     <a href="#">TAPES</a>
                                     <ul>
-                                        <li><a href="#">Cabin</a></li>
-                                        <li><a href="#">Cargo Hold</a></li>
-                                        <li><a href="#">Body</a></li>
-                                        <li><a href="#">Window</a></li>
-                                        <li><a href="#">Engine</a></li>
-                                        <li><a href="#">Wire Harness</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Cabin"})">Cabin</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="CargoHold"})">Cargo Hold</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Body"})">Body</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Window"})">Window</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Engine"})">Engine</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="WIREHARNESS"})">Wire Harness</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -350,7 +340,7 @@
                     </ul>
                 </div>
             </div>
-        @*</nav>*@
+        </nav>
         <!-- Navigation end -->
        
     </header>

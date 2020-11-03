@@ -864,6 +864,12 @@
     <Content Include="Views\Category\PPG_FastCure.cshtml" />
     <Content Include="Views\Category\PPG_AdhesionPromoters.cshtml" />
     <Content Include="Views\Category\PPG_SpecialtyProducts.cshtml" />
+    <Content Include="Views\Category\Cabin.cshtml" />
+    <Content Include="Views\Category\CargoHold.cshtml" />
+    <Content Include="Views\Category\Body.cshtml" />
+    <Content Include="Views\Category\Windows.cshtml" />
+    <Content Include="Views\Category\Engine.cshtml" />
+    <Content Include="Views\Category\WIREHARNESS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

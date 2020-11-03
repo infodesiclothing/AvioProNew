@@ -83,6 +83,31 @@ namespace AvioPro.Controllers
                 return View("PPG_SpecialtyProducts");
             }
 
+            if (Params == "Cabin")
+            {
+                return View("Cabin");
+            }
+            if (Params == "CargoHold")
+            {
+                return View("CargoHold");
+            }
+            if (Params == "Body")
+            {
+                return View("Body");
+            }
+            if (Params == "Window")
+            {
+                return View("Windows");
+            }
+            if (Params == "Engine")
+            {
+                return View("Engine");
+            }
+            if (Params == "WIREHARNESS")
+            {
+                return View("WIREHARNESS");
+            }
+            
 
             return View("COATINGS");
         }
@@ -135,10 +160,10 @@ namespace AvioPro.Controllers
             {
                 MailMessage message = new MailMessage();
                 //message.From = new MailAddress("Info@avio-pro.com");
-                message.From = new MailAddress("avio-pro@outlook.com");
+                message.From = new MailAddress("info@rightsolutions4u.com");
                 //message.To.Add("Info@avio-pro.com");
                 message.To.Add("mohtashim.siddiqui74@outlook.com");
-                message.Bcc.Add("avio-pro@outlook.com");
+                message.Bcc.Add("info@rightsolutions4u.com");
                 message.Subject = Subject;
                 var Message = bodytxt;
                 Message += "<br><br>";
@@ -154,10 +179,10 @@ namespace AvioPro.Controllers
                 message.Body = Message;
                 message.IsBodyHtml = true;
 
-                var client = new SmtpClient("smtp.outlook.com", 587)
+                var client = new SmtpClient("mail.rightsolutions4u.com", 587)
                 {
                     UseDefaultCredentials = true,
-                    Credentials = new NetworkCredential("avio-pro@outlook.com", "rsm@aviopro"),
+                    Credentials = new NetworkCredential("info@rightsolutions4u.com", ""),
                     EnableSsl = true
                 };
                 client.Send(message);
