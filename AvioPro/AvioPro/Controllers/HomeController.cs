@@ -19,7 +19,24 @@ namespace AvioPro.Controllers
 
             return View();
         }
+        public ActionResult Presense()
+        {
+            ViewBag.Message = "Your application description page.";
 
+            return View("Presense");
+        }
+        public ActionResult Vission()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View("Vission");
+        }
+        public ActionResult Mission()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View("Mission");
+        }
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

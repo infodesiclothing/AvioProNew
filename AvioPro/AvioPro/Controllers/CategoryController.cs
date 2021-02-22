@@ -138,7 +138,9 @@ namespace AvioPro.Controllers
                 Session["cart"] = li;
                 ViewBag.cart = li.Count();
                 Session["count"] = 1;
-                return View("MyCart", (List<Cart>)Session["cart"]);
+                return Redirect(Request.UrlReferrer.PathAndQuery);
+                /*return View("MyCart", (List<Cart>)Session["cart"]);*/
+                //return NoContent();
             }
             else
             {
@@ -147,11 +149,16 @@ namespace AvioPro.Controllers
                 Session["cart"] = li;
                 ViewBag.cart = li.Count();
                 Session["count"] = Convert.ToInt32(Session["count"]) + 1;
-                return View("MyCart", (List<Cart>)Session["cart"]);
+                return Redirect(Request.UrlReferrer.PathAndQuery);
 
             }
-            
+
         }
+        public ActionResult ViewCart()
+        {
+            return View("MyCart", (List<Cart>)Session["cart"]);
+        }
+
         [HttpPost]
         [ValidateInput(false)]
         public ActionResult SendEmail(string Name, string Email, string Phoneno, string Subject, string bodytxt)

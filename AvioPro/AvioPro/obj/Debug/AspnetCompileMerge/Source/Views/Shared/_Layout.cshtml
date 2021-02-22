@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             list-style: none;
-            z-index:999;
+            z-index: 999;
         }
 
         #menu {
@@ -90,7 +90,7 @@
 
             #menu ul ul {
                 top: 0;
-                left: 150px;
+                left: 250px;
                 margin: 0 0 0 20px;
                 _margin: 0; /*IE6 only*/
                 box-shadow: -1px 0 0 rgba(255,255,255,.3);
@@ -171,9 +171,9 @@
 
     @*@Styles.Render("~/assets/colors/red.css")*@
     @Styles.Render("~/assets/colors/orange.css")
-    //<!-- <link rel="stylesheet" href="assets/colors/blue.css"> -->
-    //<!--<link rel="stylesheet" href="assets/colors/pink.css">-->
-    //<!--<link rel="stylesheet" href="assets/colors/green.css">-->
+    <!-- <link rel="stylesheet" href="assets/colors/blue.css"> -->
+    <!--<link rel="stylesheet" href="assets/colors/pink.css">-->
+    <!--<link rel="stylesheet" href="assets/colors/green.css">-->
     @*@Styles.Render("~/assets/colors/purple.css")*@
     @*<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.png">
@@ -183,9 +183,11 @@
     <!-- Google-Font-->
     @Styles.Render("https://fonts.googleapis.com/css?family=Lato:300,400,700,900")
     @Scripts.Render("https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
-    @Scripts.Render("~/assets/js/responsiveslides.min.js")
-    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>*@
-    @*<script src="responsiveslides.min.js"></script>*@
+    @*@Scripts.Render("~/assets/js/responsiveslides.js")*@
+    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>*@
+    <script src="~/assets/js/responsiveslides.min.js"></script>
+
+
 
     <script>
         $(window).on('load', function () {
@@ -198,67 +200,61 @@
                     speed: 500,
                     namespace: "callbacks",
                     before: function () {
+                        alert('asdsad');
                         $('.events').append("<li>before event fired.</li>");
                     },
                     after: function () {
+                        alert('3333');
                         $('.events').append("<li>after event fired.</li>");
                     }
                 });
             });
         });
     </script>
-    <script>
-        $(function () {
-            if ($.browser.msie && $.browser.version.substr(0, 1) < 7) {
-                $('li').has('ul')
-                    .mouseover(function () {
-                        $(this).children('ul').css('visibility', 'visible');
-                    })
-                    .mouseout(function () {
-                        $(this).children('ul').css('visibility', 'hidden');
-                    })
-            }
-        });
-    </script>
+    @*<script>
+            $(function () {
+                if ($.browser.msie && $.browser.version.substr(0, 1) < 7) {
+                    $('li').has('ul')
+                        .mouseover(function () {
+                            $(this).children('ul').css('visibility', 'visible');
+                        })
+                        .mouseout(function () {
+                            $(this).children('ul').css('visibility', 'hidden');
+                        })
+                }
+            });
+        </script>*@
 </head>
 <body>
     <header>
         <div class="default-header">
             <div class="container">
-                <div class="row">
+                <div class="row" >
                     <div class="col-sm-3 col-md-2">
                         <div class="logo"> <a href="@Url.Action("Index", "Home")"><img src="~/images/logo.png" alt="image" width="160" height="80" /></a> </div>
                     </div>
-                    <div class="col-sm-9 col-md-10">
+                    <div class="col-sm-9 col-md-10" style="top:30px;">
                         <div class="header_info">
                             <div class="header_widgets">
                                 <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
                                 <p class="uppercase_text">For Support Mail us : </p>
-                                <a href="mailto:info@example.com">info@avio-pro.com</a>
+                                <a href="mailto:info@avio-pro.com">info@avio-pro.com</a>
                             </div>
                             <div class="header_widgets">
                                 <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-                                <p class="uppercase_text">Service Helpline Call Us: </p>
+                                <p class="uppercase_text">Call Us: </p>
                                 <a href="tel:971-56-661-2433">+ 971 56 661 2433</a>
                             </div>
-                            <!-- <div class="social-follow">
-                          <ul>
-                            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                          </ul>
-                        </div> -->
-                            <!-- <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div> -->
+                            <div class="header_widgets">
+                                <a class="fa fa-shopping-cart" style="font-size:20px;color:black" aria-hidden="true" href="@Url.Action("ViewCart", "Category", new { CustId = ViewBag.UserName})"></a>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Navigation -->
-        @*<nav id="navigation_bar" class="navbar navbar-expand-lg">*@
+        <nav id="navigation_bar" class="navbar navbar-expand-sm">
             <div class="container">
                 <div class="navbar-header">
                     <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggler" type="button"> <i class="fa fa-bars"></i> </button>
@@ -266,7 +262,23 @@
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul id="menu">
                         <li><a href="#">Home</a></li>
-                        <li><a href="@Url.Action("About", "Home")">About</a></li>
+                        <li>
+                            <a href="#">About</a>
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("About", "Home")">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Presense", "Home")">Our Presense</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Vission", "Home")">Our Vision</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Mission", "Home")">Our Mission</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li>
                             <a href="#">Our Products</a>
                             <ul>
@@ -313,12 +325,12 @@
                                 <li>
                                     <a href="#">TAPES</a>
                                     <ul>
-                                        <li><a href="#">Cabin</a></li>
-                                        <li><a href="#">Cargo Hold</a></li>
-                                        <li><a href="#">Body</a></li>
-                                        <li><a href="#">Window</a></li>
-                                        <li><a href="#">Engine</a></li>
-                                        <li><a href="#">Wire Harness</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Cabin"})">Cabin</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="CargoHold"})">Cargo Hold</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Body"})">Body</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Window"})">Window</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="Engine"})">Engine</a></li>
+                                        <li><a href="@Url.Action("Index","Category",new {Params="WIREHARNESS"})">Wire Harness</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -350,7 +362,7 @@
                     </ul>
                 </div>
             </div>
-        @*</nav>*@
+        </nav>
         <!-- Navigation end -->
        
     </header>

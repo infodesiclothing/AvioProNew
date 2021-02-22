@@ -35,52 +35,635 @@
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
                                                 @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch1252"})">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>*@
-                                                <a href="@Url.Action("Index", "Product",new { Param="3MScotch1252"})">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>
+                                                <a href="#ec1252" data-toggle="modal" data-dismiss="modal" data-target="#ec1252">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </a>
                                             </p>
 
                                             <p class="font-12">
                                                 1 PINT (473 ML),
                                             </p>
+                                            <div class="modal" id="ec1252">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="col-12 col-md-12 pr-lg-0 pr-md-0">
+                                                            <div class="pl-lg-4 pl-md-4">
+                                                                <h5 class="Poppins-Bold">3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 </h5>
+                                                                <hr class="border-dark mb-0 mt-0">
+                                                                <p class="font-14">
+                                                                    Part Number: EC-1252  | Brand: <a href="@Url.Action("Index","Brand",new {Params="ThreeM"})">3M</a>
+                                                                </p>
+
+                                                                <div class="row row-eq-height">
+                                                                    <div class="col-12 col-md-5 mb-4 mb-md-0">
+                                                                        <img src="~/images/no-image.png" title="3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 " alt="3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252 " class="w-100">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-7 p-md-5 d-flex align-items-center">
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold">Available Units</h6>
+                                                                    <hr class="border-dark mb-0 mt-0">
+
+                                                                    <div class="form-group row mt-md-3 mb-md-3 mb-0">
+                                                                        <label class="col-sm-3 col-form-label">1 PINT (473 ML)</label>
+
+                                                                        <div class="col-sm-9">
+                                                                            @*<button type="submit" class="btn btn-red mb-2 font-12" data-product-id="25" data-toggle="modal" data-target="#exampleModal">
+                            REQUEST A
+                            QUOTE
+                        </button>*@
+                                                                            <a id="btn_add" href="@Url.Action("AddCart", "Category" ,new { PartNumber="EC-1252", Brand="3M", Name="3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252", Units="1 PINT (473 ML)" })" class="btn btn-info btn-sm" style="margin-left:60px">
+                                                                                <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <form method="post">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                                            3M™ Scotch-Weld™ Tamper Proof Sealant EC-1252
+                                                                                        </h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">×</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="form-group">
+                                                                                            <label>Unit Name</label>
+                                                                                            <input type="text" class="form-control" name="unit_id" disabled="" value="1 PINT (473 ML)" data-unit-id="5">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Full Name</label>
+                                                                                            <input type="text" class="form-control" name="full_name" placeholder="Enter Full Name">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Mobile Number</label>
+                                                                                            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Quantity</label>
+                                                                                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Address</label>
+                                                                                            <textarea type="text" class="form-control" name="address" placeholder="Enter Address"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="button" class="btn btn-primary">
+                                                                                            Submit
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold"> </h6>
+                                                                    <hr class="border-dark mb-2 mt-0">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
                                                 @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch1137"})">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137 </a>*@
-                                                <a href="@Url.Action("Index", "Product",new { Param="3MScotch1137"})">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137 </a>
+                                                <a href="#ec1137" data-toggle="modal" data-dismiss="modal" data-target="#ec1137">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137 </a>
                                             </p>
 
                                             <p class="font-12">
                                                 473 ML,
                                             </p>
+                                            <div class="modal" id="ec1137">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="col-12 col-md-12 pr-lg-0 pr-md-0">
+                                                            <div class="pl-lg-4 pl-md-4">
+                                                                <h5 class="Poppins-Bold">3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137</h5>
+                                                                <hr class="border-dark mb-0 mt-0">
+                                                                <p class="font-14">
+                                                                    Part Number: EC-1137 | Brand: <a href="@Url.Action("Index","Brand",new {Params="ThreeM"})">3M</a>
+                                                                </p>
+                                                                <div class="row row-eq-height">
+                                                                    <div class="col-12 col-md-5 mb-4 mb-md-0">
+                                                                        <img src="~/images/no-image.png" title="3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137" alt="3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137" class="w-100">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-7 p-md-5 d-flex align-items-center">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold">Available Units</h6>
+                                                                    <hr class="border-dark mb-0 mt-0">
+
+                                                                    <div class="form-group row mt-md-3 mb-md-3 mb-0">
+                                                                        <label class="col-sm-3 col-form-label">473 ML</label>
+
+                                                                        <div class="col-sm-9">
+                                                                            <a id="btn_add" href="@Url.Action("AddCart", "Category", new { PartNumber="EC-1137", Brand="3M", Name="3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137", Units="473 ML" })" class="btn btn-info btn-sm" style="margin-left:60px">
+                                                                                <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <form method="post">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                                            3M™ Scotch-Weld™ Hi-Temp Sealer EC-1137
+                                                                                        </h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">×</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="form-group">
+                                                                                            <label>Unit Name</label>
+                                                                                            <input type="text" class="form-control" name="unit_id" disabled="" value="473 ML" data-unit-id="17">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Full Name</label>
+                                                                                            <input type="text" class="form-control" name="full_name" placeholder="Enter Full Name">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Mobile Number</label>
+                                                                                            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Quantity</label>
+                                                                                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Address</label>
+                                                                                            <textarea type="text" class="form-control" name="address" placeholder="Enter Address"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="button" class="btn btn-primary">
+                                                                                            Submit
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold"> </h6>
+                                                                    <hr class="border-dark mb-2 mt-0">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
                                                 @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch776"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>*@
-                                                <a href="@Url.Action("Index", "Product",new { Param="3MScotch776"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>
+                                                <a href="#ec776" data-toggle="modal" data-dismiss="modal" data-target="#ec776">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</a>
                                             </p>
 
                                             <p class="font-12">
                                                 5 GALLON,  946 ML,
                                             </p>
+                                            <div class="modal" id="ec776">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="col-12 col-md-12 pr-lg-0 pr-md-0">
+                                                            <div class="pl-lg-4 pl-md-4">
+                                                                <h5 class="Poppins-Bold">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776</h5>
+                                                                <hr class="border-dark mb-0 mt-0">
+                                                                <p class="font-14">
+                                                                    Part Number: EC-776 | Brand: <a href="@Url.Action("Index","Brand",new {Params="ThreeM"})">3M</a>
+                                                                </p>
+
+                                                                <div class="row row-eq-height">
+                                                                    <div class="col-12 col-md-5 mb-4 mb-md-0">
+                                                                        <img src="~/images/no-image.png" title="3M™ Scotch-Weld™ Fuel Resistant Coating EC-776" alt="3M™ Scotch-Weld™ Fuel Resistant Coating EC-776" class="w-100">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-7 p-md-5 d-flex align-items-center">
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold">Available Units</h6>
+                                                                    <hr class="border-dark mb-0 mt-0">
+
+                                                                    <div class="form-group row mt-md-3 mb-md-3 mb-0">
+                                                                        <label class="col-sm-3 col-form-label">5 GALLON</label>
+
+                                                                        <div class="col-sm-9">
+                                                                            <a id="btn_add" href="@Url.Action("AddCart", "Category" ,new { PartNumber="EC-776", Brand="3M", Name="3M™ Scotch-Weld™ Fuel Resistant Coating EC-776", Units="5 GALLON" })" class="btn btn-info btn-sm" style="margin-left:60px">
+                                                                                <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <form method="post">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                                            3M™ Scotch-Weld™ Fuel Resistant Coating EC-776
+                                                                                        </h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">×</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="form-group">
+                                                                                            <label>Unit Name</label>
+                                                                                            <input type="text" class="form-control" name="unit_id" disabled="" value="5 GALLON" data-unit-id="16">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Full Name</label>
+                                                                                            <input type="text" class="form-control" name="full_name" placeholder="Enter Full Name">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Mobile Number</label>
+                                                                                            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Quantity</label>
+                                                                                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Address</label>
+                                                                                            <textarea type="text" class="form-control" name="address" placeholder="Enter Address"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="button" class="btn btn-primary">
+                                                                                            Submit
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="form-group row mt-md-3 mb-md-3 mb-0">
+                                                                        <label class="col-sm-3 col-form-label">946 ML</label>
+
+                                                                        <div class="col-sm-9">
+                                                                            <div class="col-sm-9">
+                                                                                <a id="btn_add" href="@Url.Action("AddCart", "Category" ,new { PartNumber="EC-776", Brand="3M", Name="3M™ Scotch-Weld™ Fuel Resistant Coating EC-776", Units="946 ML" })" class="btn btn-info btn-sm" style="margin-left:60px">
+                                                                                    <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <form method="post">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                                            3M™ Scotch-Weld™ Fuel Resistant Coating EC-776
+                                                                                        </h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">×</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="form-group">
+                                                                                            <label>Unit Name</label>
+                                                                                            <input type="text" class="form-control" name="unit_id" disabled="" value="946 ML" data-unit-id="18">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Full Name</label>
+                                                                                            <input type="text" class="form-control" name="full_name" placeholder="Enter Full Name">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Mobile Number</label>
+                                                                                            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Quantity</label>
+                                                                                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Address</label>
+                                                                                            <textarea type="text" class="form-control" name="address" placeholder="Enter Address"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="button" class="btn btn-primary">
+                                                                                            Submit
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold"> </h6>
+                                                                    <hr class="border-dark mb-2 mt-0">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
                                                 @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch776SR"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>*@
-                                                <a href="@Url.Action("Index", "Product",new { Param="3MScotch776SR"})">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>
+                                                <a href="#ec776sr" data-toggle="modal" data-dismiss="modal" data-target="#ec776sr">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</a>
                                             </p>
 
                                             <p class="font-12">
                                                 1 USQ,
                                             </p>
+                                            <div class="modal" id="ec776sr">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="col-12 col-md-12 pr-lg-0 pr-md-0">
+                                                            <div class="pl-lg-4 pl-md-4">
+                                                                <h5 class="Poppins-Bold">3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR</h5>
+                                                                <hr class="border-dark mb-0 mt-0">
+                                                                <p class="font-14">
+                                                                    Part Number: EC-776SR | Brand: <a href="@Url.Action("Index","Brand",new {Params="ThreeM"})">3M</a>
+                                                                </p>
+
+                                                                <div class="row row-eq-height">
+                                                                    <div class="col-12 col-md-5 mb-4 mb-md-0">
+                                                                        <img src="~/images/no-image.png" title="3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR" alt="3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR" class="w-100">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-7 p-md-5 d-flex align-items-center">
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold">Available Units</h6>
+                                                                    <hr class="border-dark mb-0 mt-0">
+
+                                                                    <div class="form-group row mt-md-3 mb-md-3 mb-0">
+                                                                        <label class="col-sm-3 col-form-label">1 USQ</label>
+
+                                                                        <div class="col-sm-9">
+                                                                            <div class="col-sm-9">
+                                                                                <a id="btn_add" href="@Url.Action("AddCart", "Category" ,new { PartNumber="EC-776SR", Brand="3M", Name="3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR", Units="1 USQ" })" class="btn btn-info btn-sm" style="margin-left:60px">
+                                                                                    <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <form method="post">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                                            3M™ Scotch-Weld™ Fuel Resistant Coating EC-776SR
+                                                                                        </h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">×</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="form-group">
+                                                                                            <label>Unit Name</label>
+                                                                                            <input type="text" class="form-control" name="unit_id" disabled="" value="1 USQ" data-unit-id="2">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Full Name</label>
+                                                                                            <input type="text" class="form-control" name="full_name" placeholder="Enter Full Name">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Mobile Number</label>
+                                                                                            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Quantity</label>
+                                                                                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Address</label>
+                                                                                            <textarea type="text" class="form-control" name="address" placeholder="Enter Address"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="button" class="btn btn-primary">
+                                                                                            Submit
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold"> </h6>
+                                                                    <hr class="border-dark mb-2 mt-0">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6">
                                             <p class="font-14 mb-0">
                                                 @*<a href="@Url.Action("Index", "Product",new { Param="3MScotch5816"})">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>*@
-                                                <a href="@Url.Action("Index", "Product",new { Param="3MScotch5816"})">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>
+                                                <a href="#ec5816" data-toggle="modal" data-dismiss="modal" data-target="#ec5816">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</a>
                                             </p>
 
                                             <p class="font-12">
                                                 5 GALLON,  946 ML,
                                             </p>
+                                            <div class="modal" id="ec5816">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="col-12 col-md-12 pr-lg-0 pr-md-0">
+                                                            <div class="pl-lg-4 pl-md-4">
+                                                                <h5 class="Poppins-Bold">3M™ Scotch-Weld™ Elastomeric Coating EC-5816</h5>
+                                                                <hr class="border-dark mb-0 mt-0">
+                                                                <p class="font-14">
+                                                                    Part Number: EC-5816 | Brand: <a href="@Url.Action("Index","Brand",new {Params="ThreeM"})">3M</a>
+                                                                </p>
+
+                                                                <div class="row row-eq-height">
+                                                                    <div class="col-12 col-md-5 mb-4 mb-md-0">
+                                                                        <img src="~/images/no-image.png" title="3M™ Scotch-Weld™ Elastomeric Coating EC-5816" alt="3M™ Scotch-Weld™ Elastomeric Coating EC-5816" class="w-100">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-7 p-md-5 d-flex align-items-center">
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold">Available Units</h6>
+                                                                    <hr class="border-dark mb-0 mt-0">
+
+                                                                    <div class="form-group row mt-md-3 mb-md-3 mb-0">
+                                                                        <label class="col-sm-3 col-form-label">5 GALLON</label>
+
+                                                                        <div class="col-sm-9">
+                                                                            <a id="btn_add" href="@Url.Action("AddCart", "Category" ,new { PartNumber="EC-5816", Brand="3M", Name="3M™ Scotch-Weld™ Elastomeric Coating EC-5816", Units="5 GALLON" })" class="btn btn-info btn-sm" style="margin-left:60px">
+                                                                                <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <form method="post">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                                            3M™ Scotch-Weld™ Elastomeric Coating EC-5816
+                                                                                        </h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">×</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="form-group">
+                                                                                            <label>Unit Name</label>
+                                                                                            <input type="text" class="form-control" name="unit_id" disabled="" value="5 GALLON" data-unit-id="16">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Full Name</label>
+                                                                                            <input type="text" class="form-control" name="full_name" placeholder="Enter Full Name">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Mobile Number</label>
+                                                                                            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Quantity</label>
+                                                                                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Address</label>
+                                                                                            <textarea type="text" class="form-control" name="address" placeholder="Enter Address"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="button" class="btn btn-primary">
+                                                                                            Submit
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="form-group row mt-md-3 mb-md-3 mb-0">
+                                                                        <label class="col-sm-3 col-form-label">946 ML</label>
+
+                                                                        <div class="col-sm-9">
+                                                                            <div class="col-sm-9">
+                                                                                <a id="btn_add" href="@Url.Action("AddCart", "Category" ,new { PartNumber="EC-5816", Brand="3M", Name="3M™ Scotch-Weld™ Elastomeric Coating EC-5816", Units="946 ML" })" class="btn btn-info btn-sm" style="margin-left:60px">
+                                                                                    <span class="glyphicon glyphicon-shopping-cart"></span> Add To Cart
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <form method="post">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                                            3M™ Scotch-Weld™ Elastomeric Coating EC-5816
+                                                                                        </h5>
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                            <span aria-hidden="true">×</span>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="form-group">
+                                                                                            <label>Unit Name</label>
+                                                                                            <input type="text" class="form-control" name="unit_id" disabled="" value="946 ML" data-unit-id="18">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Full Name</label>
+                                                                                            <input type="text" class="form-control" name="full_name" placeholder="Enter Full Name">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Mobile Number</label>
+                                                                                            <input type="text" class="form-control" name="mobile_number" placeholder="Enter Mobile Number">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Quantity</label>
+                                                                                            <input type="text" class="form-control" name="quantity" placeholder="Enter Quantity">
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label>Address</label>
+                                                                                            <textarea type="text" class="form-control" name="address" placeholder="Enter Address"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                                                            Close
+                                                                                        </button>
+                                                                                        <button type="button" class="btn btn-primary">
+                                                                                            Submit
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-md-5">
+                                                                    <h6 class="Poppins-Bold"> </h6>
+                                                                    <hr class="border-dark mb-2 mt-0">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

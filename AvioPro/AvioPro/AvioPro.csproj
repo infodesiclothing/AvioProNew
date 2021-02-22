@@ -206,7 +206,6 @@
     <Content Include="images\avio-pro-logo-white.png" />
     <Content Include="images\banner1.jpg" />
     <Content Include="images\banner1old.jpg" />
-    <Content Include="images\banner2.jpeg" />
     <Content Include="images\banner2old.jpg" />
     <Content Include="images\banner3.jpg" />
     <Content Include="images\banner3old.jpg" />
@@ -232,6 +231,7 @@
     <Content Include="images\intro-bg-3.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\lps.jpg" />
+    <Content Include="images\mission.jpeg" />
     <Content Include="images\mission.jpg" />
     <Content Include="images\no-image.png" />
     <Content Include="images\our-history.jpg" />
@@ -243,6 +243,8 @@
     <Content Include="images\PPG\img4.jpg" />
     <Content Include="images\PPG\img5.jpg" />
     <Content Include="images\PPG\ppglogo.png" />
+    <Content Include="images\presense.jpeg" />
+    <Content Include="images\presense_new.png" />
     <Content Include="images\products\3MPolyurethane ProtectiveTape8658DL.jpg" />
     <Content Include="images\products\3MPolyurethaneProtectiveTape544.jpg" />
     <Content Include="images\products\3MScotch-WeldFuelResistantCoatingEC-776.jpg" />
@@ -575,6 +577,7 @@
     <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 560 %2824 X 1USQ%29.jpg" />
     <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL 750 %2824 X 1USQ%29.jpg" />
     <Content Include="images\upload\FeaturedImages\AERO SHELL TURBINE OIL ASCENDER %2824 X 1USQ%29.jpg" />
+    <Content Include="images\vision.jpeg" />
     <Content Include="images\vision.jpg" />
     <Content Include="images\website side logo.jpg" />
     <Content Include="menu.htm" />
@@ -870,6 +873,9 @@
     <Content Include="Views\Category\Windows.cshtml" />
     <Content Include="Views\Category\Engine.cshtml" />
     <Content Include="Views\Category\WIREHARNESS.cshtml" />
+    <Content Include="Views\Shared\Presense.cshtml" />
+    <Content Include="Views\Shared\Vission.cshtml" />
+    <Content Include="Views\Shared\Mission.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
