@@ -206,6 +206,7 @@
     <Content Include="images\avio-pro-logo-white.png" />
     <Content Include="images\banner1.jpg" />
     <Content Include="images\banner1old.jpg" />
+    <Content Include="images\banner2.jpg" />
     <Content Include="images\banner2old.jpg" />
     <Content Include="images\banner3.jpg" />
     <Content Include="images\banner3old.jpg" />
@@ -487,6 +488,7 @@
     <Content Include="images\products\__MACOSX\industries\js\._owl.carousel.min.js" />
     <Content Include="images\products\__MACOSX\industries\js\._popper.min.js" />
     <Content Include="images\safteyitems.jpg" />
+    <Content Include="images\shopping-cart.gif" />
     <Content Include="images\slide1.jpg" />
     <Content Include="images\Technical.jpg" />
     <Content Include="images\tyres.jpg" />

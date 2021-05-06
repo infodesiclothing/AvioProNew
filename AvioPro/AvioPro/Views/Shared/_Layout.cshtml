@@ -233,7 +233,7 @@
                     <div class="col-sm-3 col-md-2">
                         <div class="logo"> <a href="@Url.Action("Index", "Home")"><img src="~/images/logo.png" alt="image" width="160" height="80" /></a> </div>
                     </div>
-                    <div class="col-sm-9 col-md-10" style="top:30px;">
+                    <div class="col-sm-9 col-md-10" style="top:30px;align-content:end">
                         <div class="header_info">
                             <div class="header_widgets">
                                 <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
@@ -244,9 +244,6 @@
                                 <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
                                 <p class="uppercase_text">Call Us: </p>
                                 <a href="tel:971-56-661-2433">+ 971 56 661 2433</a>
-                            </div>
-                            <div class="header_widgets">
-                                <a class="fa fa-shopping-cart" style="font-size:20px;color:black" aria-hidden="true" href="@Url.Action("ViewCart", "Category", new { CustId = ViewBag.UserName})"></a>
                             </div>
                         </div>
                 </div>
@@ -359,6 +356,12 @@
                             </ul>
                         </li>
                         <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                        <li style="width:50%; float:right;">
+
+                            <a aria-hidden="true" href="/Category/ViewCart">
+                                <img src="/images/shopping-cart.gif" />
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
